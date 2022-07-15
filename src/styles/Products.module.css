@@ -1,0 +1,9 @@
+.productsContainer {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.productCard {
+  width: 400px;
+}
