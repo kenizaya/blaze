@@ -6,4 +6,12 @@
 }
 .productCard {
   width: 400px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.priceAndIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

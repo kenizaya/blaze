@@ -7,3 +7,8 @@
 h1 {
   flex: 1;
 }
+
+.cartIcon {
+  font-size: 1.2rem;
+  margin-left: 40px;
+}
