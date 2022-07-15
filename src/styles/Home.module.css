@@ -11,9 +11,10 @@ img {
 .shopBtn {
   position: absolute;
   top: 64%;
-  left: 40%;
+  left: 42%;
   padding: 20px 50px;
   background-color: antiquewhite;
   font-size: 1.1rem;
   border-radius: 4px;
+  cursor: pointer;
 }
