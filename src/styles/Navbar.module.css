@@ -2,3 +2,11 @@
   display: flex;
   gap: 50px;
 }
+
+.link {
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+}

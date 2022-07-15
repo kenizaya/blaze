@@ -1,0 +1,19 @@
+.homeContainer {
+  max-width: 100vw;
+  position: relative;
+}
+
+img {
+  min-height: 100%;
+  width: 100%;
+}
+
+.shopBtn {
+  position: absolute;
+  top: 64%;
+  left: 40%;
+  padding: 20px 50px;
+  background-color: antiquewhite;
+  font-size: 1.1rem;
+  border-radius: 4px;
+}

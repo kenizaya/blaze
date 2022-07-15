@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
 import styles from '../styles/Header.module.css'
-import { Outlet } from 'react-router-dom'
 
 const Header = () => {
   return (
