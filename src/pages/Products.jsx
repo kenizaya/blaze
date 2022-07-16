@@ -1,26 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { sweatshirts } from '../data/sweatshirts'
+import Product from '../components/Product'
 import styles from '../styles/Products.module.css'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 const Products = () => {
+  const [products, setProducts] = useState(sweatshirts)
+
+  const handleClick = (e, id) => {
+    setProducts((prevProduct) => {
+      const newProduct = prevProduct.map((product) => {
+        if (product.id === id) {
+          return { ...product, qty: product.qty + 1 }
+        }
+        return product
+      })
+      return newProduct
+    })
+  }
+  useEffect(() => {
+    console.log(products)
+  }, [products])
   return (
     <div className={styles.productsContainer}>
-      {sweatshirts.map((item) => {
-        return (
-          <div key={item.id} className={styles.productCard}>
-            <img src={item.src} alt={item.name} />
-            <p>{item.name}</p>
-            <div className={styles.priceAndIcon}>
-              <span className={styles.price}>${item.price}</span>
-              <span>
-                <BsChevronLeft />
-                <BsChevronRight />
-              </span>
-            </div>
-          </div>
-        )
-      })}
+      {products.map((item) => (
+        <Product
+          key={item.id}
+          {...item}
+          onClick={(e, id) => handleClick(e, id)}
+        />
+      ))}
     </div>
   )
 }

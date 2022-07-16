@@ -8,6 +8,11 @@ h1 {
   flex: 1;
 }
 
+.logo {
+  color: #222222;
+  text-decoration: none;
+}
+
 .cartIcon {
   font-size: 1.2rem;
   margin-left: 40px;
