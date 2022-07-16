@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Product from '../components/Product'
-import styles from '../styles/Products.module.css'
+import styles from '../styles/Cart.module.css'
 import GlobalContext from '../GlobalContext'
 
 const Cart = () => {
@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className={styles.productsContainer}>
+      <div className={styles.cartContainer}>
         {cart.items.map((item) => (
           <Product
             key={item.id}

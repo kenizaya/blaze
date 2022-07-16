@@ -21,14 +21,6 @@ const Navbar = () => {
       >
         Products
       </NavLink>
-      <NavLink
-        to='contact'
-        className={({ isActive }) =>
-          isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
-        }
-      >
-        Contact
-      </NavLink>
     </nav>
   )
 }

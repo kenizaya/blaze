@@ -1,0 +1,6 @@
+.cartContainer {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
