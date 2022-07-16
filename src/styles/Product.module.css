@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.inputQty {
+  max-width: 40px;
+}
+
 .chevrons {
   display: flex;
   gap: 10px;

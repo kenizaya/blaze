@@ -8,11 +8,24 @@ const Products = () => {
   const [products, setProducts] = useState(sweatshirts)
   const [cart, setCart] = useOutletContext()
 
-  const handleIncrease = (e, id) => {
+  const handleIncrease = (id) => {
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
         if (product.id === id) {
-          return { ...product, qty: product.qty + 1 }
+          return { ...product, qty: parseInt(product.qty || 0) + 1 }
+        }
+        return product
+      })
+      return newProduct
+    })
+    console.log(id)
+  }
+
+  const handleDecrease = (id) => {
+    setProducts((prevProduct) => {
+      const newProduct = prevProduct.map((product) => {
+        if (product.id === id && product.qty > 0) {
+          return { ...product, qty: parseInt(product.qty || 0) - 1 }
         }
         return product
       })
@@ -20,24 +33,28 @@ const Products = () => {
     })
   }
 
-  const handleDecrease = (e, id) => {
+  const handleChange = (e, id) => {
+    console.log(e.target.value)
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
-        if (product.id === id && product.qty > 0) {
-          return { ...product, qty: product.qty - 1 }
+        if (product.id === id && product.qty >= 0) {
+          return { ...product, qty: parseInt(e.target.value) || '' }
         }
         return product
       })
       return newProduct
     })
   }
+
   useEffect(() => {
     setCart({
       ...cart,
-      total: products.reduce((prev, cur) => prev + cur.qty, 0),
+      totalItems: products.reduce((prev, cur) => prev + cur.qty, 0),
       isFilled: products.some((product) => product.qty > 0),
     })
   }, [products])
+
+  console.log(products)
 
   return (
     <div className={styles.productsContainer}>
@@ -45,8 +62,9 @@ const Products = () => {
         <Product
           key={item.id}
           {...item}
-          onIncrease={(e, id) => handleIncrease(e, id)}
-          onDecrease={(e, id) => handleDecrease(e, id)}
+          onIncrease={(id) => handleIncrease(id)}
+          onDecrease={(id) => handleDecrease(id)}
+          onChange={(e, id) => handleChange(e, id)}
         />
       ))}
     </div>

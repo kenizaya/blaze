@@ -14,6 +14,10 @@ h1 {
 }
 
 .cartIcon {
-  font-size: 1.2rem;
   margin-left: 40px;
+  font-size: 1.2rem;
+}
+
+.cartTotal {
+  vertical-align: top;
 }

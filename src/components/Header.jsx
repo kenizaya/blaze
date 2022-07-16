@@ -13,12 +13,12 @@ const Header = ({ cart }) => {
         </Link>
       </h1>
       <Navbar />
-      {console.log(cart.total)}
-      {cart.isFilled ? (
-        <BsBagFill className={styles.cartIcon} />
-      ) : (
-        <BsBag className={styles.cartIcon} />
-      )}
+      <div className={styles.cartIcon}>
+        <div className={styles.cartTotal}>
+          {cart.isFilled && cart.totalItems}
+        </div>
+        {cart.isFilled ? <BsBagFill /> : <BsBag />}
+      </div>
     </header>
   )
 }

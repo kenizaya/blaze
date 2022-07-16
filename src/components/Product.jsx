@@ -4,7 +4,7 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styles from '../styles/Product.module.css'
 
 const Product = (props) => {
-  const { price, src, qty, name, onIncrease, onDecrease } = props
+  const { id, price, src, qty, name, onIncrease, onDecrease, onChange } = props
 
   return (
     <div className={styles.productCard}>
@@ -13,17 +13,16 @@ const Product = (props) => {
       <div className={styles.priceAndIcon}>
         <span className={styles.price}>${price}</span>
         <span className={styles.chevrons}>
-          <button
-            className={styles.chevron}
-            onClick={(e, id) => onDecrease(e, props.id)}
-          >
+          <button className={styles.chevron} onClick={() => onDecrease(id)}>
             <BsChevronLeft />
           </button>
-          <span>{qty}</span>
-          <button
-            className={styles.chevron}
-            onClick={(e, id) => onIncrease(e, props.id)}
-          >
+          <input
+            type='text'
+            value={qty}
+            className={styles.inputQty}
+            onChange={(e) => onChange(e, id)}
+          />
+          <button className={styles.chevron} onClick={() => onIncrease(id)}>
             <BsChevronRight />
           </button>
         </span>

@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   const [cart, setCart] = useState({
-    total: 0,
+    totalItems: 0,
     isFilled: false,
   })
   return (
