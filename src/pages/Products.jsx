@@ -6,11 +6,23 @@ import styles from '../styles/Products.module.css'
 const Products = () => {
   const [products, setProducts] = useState(sweatshirts)
 
-  const handleClick = (e, id) => {
+  const handleIncrease = (e, id) => {
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
         if (product.id === id) {
           return { ...product, qty: product.qty + 1 }
+        }
+        return product
+      })
+      return newProduct
+    })
+  }
+
+  const handleDecrease = (e, id) => {
+    setProducts((prevProduct) => {
+      const newProduct = prevProduct.map((product) => {
+        if (product.id === id) {
+          return { ...product, qty: product.qty - 1 }
         }
         return product
       })
@@ -26,7 +38,8 @@ const Products = () => {
         <Product
           key={item.id}
           {...item}
-          onClick={(e, id) => handleClick(e, id)}
+          onIncrease={(e, id) => handleIncrease(e, id)}
+          onDecrease={(e, id) => handleDecrease(e, id)}
         />
       ))}
     </div>
