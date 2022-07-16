@@ -21,7 +21,7 @@ const Products = () => {
   const handleDecrease = (e, id) => {
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
-        if (product.id === id) {
+        if (product.id === id && product.qty > 0) {
           return { ...product, qty: product.qty - 1 }
         }
         return product

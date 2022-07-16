@@ -13,14 +13,19 @@ const Product = (props) => {
       <div className={styles.priceAndIcon}>
         <span className={styles.price}>${price}</span>
         <span className={styles.chevrons}>
-          <Button onClick={(e, id) => onDecrease(e, props.id)}>
-            <BsChevronLeft className={styles.chevron} />
-          </Button>
-          <BsChevronLeft className={styles.chevron} />
+          <button
+            className={styles.chevron}
+            onClick={(e, id) => onDecrease(e, props.id)}
+          >
+            <BsChevronLeft />
+          </button>
           <span>{qty}</span>
-          <Button onClick={(e, id) => onIncrease(e, props.id)}>
-            <BsChevronRight className={styles.chevron} />
-          </Button>
+          <button
+            className={styles.chevron}
+            onClick={(e, id) => onIncrease(e, props.id)}
+          >
+            <BsChevronRight />
+          </button>
         </span>
       </div>
     </div>
