@@ -15,9 +15,15 @@ h1 {
 
 .cartIcon {
   margin-left: 40px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .cartTotal {
-  vertical-align: top;
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
 }

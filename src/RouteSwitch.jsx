@@ -4,6 +4,7 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Error from './pages/Error'
 import App from './App'
+import Cart from './pages/Cart'
 
 const RouteSwitch = () => {
   return (
@@ -13,6 +14,7 @@ const RouteSwitch = () => {
           <Route index element={<Home />} />
           <Route path='products' element={<Products />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='cart' element={<Cart />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { BsBag, BsBagFill } from 'react-icons/bs'
+import { MdArrowRight } from 'react-icons/md'
 import styles from '../styles/Header.module.css'
 
 const Header = ({ cart }) => {
@@ -13,12 +14,18 @@ const Header = ({ cart }) => {
         </Link>
       </h1>
       <Navbar />
-      <div className={styles.cartIcon}>
-        <div className={styles.cartTotal}>
-          {cart.isFilled && cart.totalItems}
+      <Link to='cart' style={{ color: 'black' }}>
+        <div className={styles.cartIcon}>
+          {cart.isFilled ? (
+            <>
+              <BsBagFill />
+              <div className={styles.cartTotal}>{cart.totalItems}</div>
+            </>
+          ) : (
+            <BsBag />
+          )}
         </div>
-        {cart.isFilled ? <BsBagFill /> : <BsBag />}
-      </div>
+      </Link>
     </header>
   )
 }

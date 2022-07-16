@@ -49,12 +49,12 @@ const Products = () => {
   useEffect(() => {
     setCart({
       ...cart,
+      items: products.filter((product) => product.qty > 0),
       totalItems: products.reduce((prev, cur) => prev + cur.qty, 0),
+      totalPrice: products.reduce((prev, cur) => prev + cur.qty * cur.price, 0),
       isFilled: products.some((product) => product.qty > 0),
     })
   }, [products])
-
-  console.log(products)
 
   return (
     <div className={styles.productsContainer}>

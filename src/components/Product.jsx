@@ -17,7 +17,7 @@ const Product = (props) => {
             <BsChevronLeft />
           </button>
           <input
-            type='text'
+            type='number'
             value={qty}
             className={styles.inputQty}
             onChange={(e) => onChange(e, id)}
