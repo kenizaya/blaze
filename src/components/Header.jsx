@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { BsBag, BsBagFill } from 'react-icons/bs'
 import styles from '../styles/Header.module.css'
 
-const Header = () => {
+const Header = ({ isCartFilled }) => {
   return (
     <header className={styles.header}>
       <h1>
@@ -13,7 +13,12 @@ const Header = () => {
         </Link>
       </h1>
       <Navbar />
-      <BsBag className={styles.cartIcon} />
+      {console.log(isCartFilled)}
+      {isCartFilled ? (
+        <BsBagFill className={styles.cartIcon} />
+      ) : (
+        <BsBag className={styles.cartIcon} />
+      )}
     </header>
   )
 }

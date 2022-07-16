@@ -3,13 +3,13 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Error from './pages/Error'
-import SharedLayout from './pages/SharedLayout'
+import App from './App'
 
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='products' element={<Products />} />
           <Route path='contact' element={<Contact />} />

@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 const App = () => {
+  const [isCartFilled, setIsCartFilled] = useState(false)
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+      <Header isCartFilled={isCartFilled} />
+      <Outlet context={[isCartFilled, setIsCartFilled]} />
+      <Footer />
+    </>
   )
 }
 
