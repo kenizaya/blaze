@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { BsBag, BsBagFill } from 'react-icons/bs'
-import { MdArrowRight } from 'react-icons/md'
 import styles from '../styles/Header.module.css'
+import GlobalContext from '../GlobalContext'
 
-const Header = ({ cart }) => {
+const Header = () => {
+  const { cart } = useContext(GlobalContext)
+
   return (
     <header className={styles.header}>
       <h1>

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import Product from '../components/Product'
 import styles from '../styles/Products.module.css'
-import { useOutletContext } from 'react-router-dom'
+import GlobalContext from '../GlobalContext'
 
 const Cart = () => {
-  const [cart, setCart] = useOutletContext()
+  const { cart, handleChange, handleIncrease, handleDecrease } =
+    useContext(GlobalContext)
 
   return (
     <>
@@ -13,9 +14,9 @@ const Cart = () => {
           <Product
             key={item.id}
             {...item}
-            // onIncrease={(id) => handleIncrease(id)}
-            // onDecrease={(id) => handleDecrease(id)}
-            // onChange={(e, id) => handleChange(e, id)}
+            onIncrease={(id) => handleIncrease(id)}
+            onDecrease={(id) => handleDecrease(id)}
+            onChange={(e, id) => handleChange(e, id)}
           />
         ))}
       </div>

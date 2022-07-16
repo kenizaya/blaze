@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Button from './Button'
+import React from 'react'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styles from '../styles/Product.module.css'
 
