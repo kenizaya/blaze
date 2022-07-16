@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Product from '../components/Product'
+import FilterSidebar from '../components/FilterSidebar'
 import styles from '../styles/Products.module.css'
 import GlobalContext from '../GlobalContext'
 
@@ -8,16 +9,19 @@ const Products = () => {
     useContext(GlobalContext)
 
   return (
-    <div className={styles.productsContainer}>
-      {products.map((item) => (
-        <Product
-          key={item.id}
-          {...item}
-          onIncrease={(id) => handleIncrease(id)}
-          onDecrease={(id) => handleDecrease(id)}
-          onChange={(e, id) => handleChange(e, id)}
-        />
-      ))}
+    <div className={styles.mainContainer}>
+      <FilterSidebar />
+      <div className={styles.productsContainer}>
+        {products.map((item) => (
+          <Product
+            key={item.id}
+            {...item}
+            onIncrease={(id) => handleIncrease(id)}
+            onDecrease={(id) => handleDecrease(id)}
+            onChange={(e, id) => handleChange(e, id)}
+          />
+        ))}
+      </div>
     </div>
   )
 }

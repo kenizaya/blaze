@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
-import { sweatshirts } from './data/sweatshirts'
+import { allProducts } from './data/allProducts'
 
 const GlobalContext = createContext()
 
@@ -10,7 +10,7 @@ export const GlobalProvider = ({ children }) => {
     totalPrice: 0,
     isFilled: false,
   })
-  const [products, setProducts] = useState(sweatshirts)
+  const [products, setProducts] = useState(allProducts)
 
   const handleIncrease = (id) => {
     setProducts((prevProduct) => {
@@ -22,7 +22,6 @@ export const GlobalProvider = ({ children }) => {
       })
       return newProduct
     })
-    console.log(id)
   }
 
   const handleDecrease = (id) => {
@@ -66,6 +65,7 @@ export const GlobalProvider = ({ children }) => {
         cart,
         setCart,
         products,
+        setProducts,
         handleIncrease,
         handleDecrease,
         handleChange,

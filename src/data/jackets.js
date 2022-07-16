@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-export const sweatshirts = [
+export const jackets = [
   {
     id: uuid(),
     src: `${require('../assets/products/jackets/black-water-repellent-shell-jacket.jpg')}`,
@@ -17,7 +17,7 @@ export const sweatshirts = [
   },
   {
     id: uuid(),
-    src: `${require('../assets/products/jackets/green-solid-regular-fit-softshell-jacket')}`,
+    src: `${require('../assets/products/jackets/green-solid-regular-fit-softshell-jacket.jpg')}`,
     name: 'Green Solid Regular Fit Softshell Jacket',
     price: '33.99',
     qty: 0,

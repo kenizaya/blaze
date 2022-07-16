@@ -17,7 +17,7 @@ export const allProducts = [
   },
   {
     id: uuid(),
-    src: `${require('../assets/products/jackets/green-solid-regular-fit-softshell-jacket')}`,
+    src: `${require('../assets/products/jackets/green-solid-regular-fit-softshell-jacket.jpg')}`,
     name: 'Green Solid Regular Fit Softshell Jacket',
     price: '33.99',
     qty: 0,

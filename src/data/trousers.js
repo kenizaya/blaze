@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-export const sweatshirts = [
+export const trousers = [
   {
     id: uuid(),
     src: `${require('../assets/products/trousers/blue-solid-twill-trousers.jpg')}`,
