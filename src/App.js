@@ -4,11 +4,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 const App = () => {
-  const [isCartFilled, setIsCartFilled] = useState(false)
+  const [cart, setCart] = useState({
+    total: 0,
+    isFilled: false,
+  })
   return (
     <>
-      <Header isCartFilled={isCartFilled} />
-      <Outlet context={[isCartFilled, setIsCartFilled]} />
+      <Header cart={cart} />
+      <Outlet context={[cart, setCart]} />
       <Footer />
     </>
   )

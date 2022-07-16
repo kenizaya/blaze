@@ -6,7 +6,7 @@ import { useOutletContext } from 'react-router-dom'
 
 const Products = () => {
   const [products, setProducts] = useState(sweatshirts)
-  const [isCartFilled, setIsCartFilled] = useOutletContext()
+  const [cart, setCart] = useOutletContext()
 
   const handleIncrease = (e, id) => {
     setProducts((prevProduct) => {
@@ -32,7 +32,11 @@ const Products = () => {
     })
   }
   useEffect(() => {
-    setIsCartFilled(products.some((product) => product.qty > 0))
+    setCart({
+      ...cart,
+      total: products.reduce((prev, cur) => prev + cur.qty, 0),
+      isFilled: products.some((product) => product.qty > 0),
+    })
   }, [products])
 
   return (
