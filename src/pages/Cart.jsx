@@ -20,7 +20,10 @@ const Cart = () => {
             />
           </div>
         ))}
-        <div>Total = ${cart.totalPrice.toFixed(2)}</div>
+        <div className={styles.checkout}>
+          <div>Total = ${cart.totalPrice.toFixed(2)}</div>
+          <button className={styles.checkoutBtn}>Checkout</button>
+        </div>
       </div>
     </>
   )
