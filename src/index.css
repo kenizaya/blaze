@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 *,
 *::before,
 *::after {
@@ -12,6 +14,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #102a43;
+  font-family: lato, serif;
+  font-size: 1.2rem;
 }
 
 code {

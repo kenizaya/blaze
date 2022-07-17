@@ -18,14 +18,14 @@ export const jackets = [
   {
     id: uuid(),
     src: `${require('../assets/products/jackets/green-solid-regular-fit-softshell-jacket.jpg')}`,
-    name: 'Green Solid Regular Fit Softshell Jacket',
+    name: 'Green Solid Fit Softshell Jacket',
     price: '33.99',
     qty: 0,
   },
   {
     id: uuid(),
     src: `${require('../assets/products/jackets/off-white-solid-teddy-lined-trucker-jacket.jpg')}`,
-    name: 'Off White Solid Teddy Lined Trucker Jacket',
+    name: 'Teddy Lined Trucker Jacket',
     price: '27.99',
     qty: 0,
   },

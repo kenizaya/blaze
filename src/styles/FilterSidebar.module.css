@@ -1,17 +1,17 @@
 .sidebarContainer {
   height: 100vh;
-  border: 1px solid black;
-  padding: 120px;
-}
-
-ul {
+  width: 380px;
+  padding: 50px 120px;
+  font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 100px;
+  align-items: center;
 }
 
 li {
   list-style: none;
   cursor: pointer;
   padding-bottom: 40px;
+  text-align: left;
 }

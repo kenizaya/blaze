@@ -1,15 +1,33 @@
 .productCard {
-  width: 300px;
-  height: 400px;
-  margin-bottom: 100px;
+  display: flex;
   line-height: 2;
+  width: 600px;
+  align-items: center;
+  gap: 50px;
+  border: 2px solid #243b53;
+  box-shadow: 0 6px 12px hsla(0, 0%, 0%, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.productImage {
+  width: 175px;
+  height: 200px;
+}
+
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 320px;
 }
 
 .priceAndIcon {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .inputQty {

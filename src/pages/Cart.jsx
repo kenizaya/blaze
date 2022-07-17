@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Product from '../components/Product'
+import CartProduct from '../components/CartProduct'
 import styles from '../styles/Cart.module.css'
 import GlobalContext from '../GlobalContext'
 
@@ -11,17 +11,17 @@ const Cart = () => {
     <>
       <div className={styles.cartContainer}>
         {cart.items.map((item) => (
-          <Product
-            key={item.id}
-            {...item}
-            onIncrease={(id) => handleIncrease(id)}
-            onDecrease={(id) => handleDecrease(id)}
-            onChange={(e, id) => handleChange(e, id)}
-          />
+          <div className={styles.cartProduct} key={item.id}>
+            <CartProduct
+              {...item}
+              onIncrease={(id) => handleIncrease(id)}
+              onDecrease={(id) => handleDecrease(id)}
+              onChange={(e, id) => handleChange(e, id)}
+            />
+          </div>
         ))}
+        <div>Total = ${cart.totalPrice.toFixed(2)}</div>
       </div>
-
-      <div>Total ${cart.totalPrice.toFixed(2)}</div>
     </>
   )
 }

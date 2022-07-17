@@ -6,8 +6,9 @@
 
 .link {
   text-decoration: none;
+  color: #102a43;
 }
 
 .active {
-  color: blue;
+  color: #127fbf;
 }

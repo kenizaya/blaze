@@ -12,6 +12,8 @@ export const GlobalProvider = ({ children }) => {
   })
   const [products, setProducts] = useState(allProducts)
 
+  const [cartItems, setCartItems] = useState([])
+
   const handleIncrease = (id) => {
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
@@ -41,7 +43,7 @@ export const GlobalProvider = ({ children }) => {
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
         if (product.id === id && product.qty >= 0) {
-          return { ...product, qty: parseInt(e.target.value) || '' }
+          return { ...product, qty: parseInt(e.target.value) || 0 }
         }
         return product
       })

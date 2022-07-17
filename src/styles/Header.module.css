@@ -9,7 +9,7 @@ h1 {
 }
 
 .logo {
-  color: #222222;
+  color: #102a43;
   text-decoration: none;
 }
 
@@ -18,11 +18,12 @@ h1 {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  color: #102a43;
 }
 
 .cartTotal {
-  background-color: black;
-  color: white;
+  background-color: #102a43;
+  color: #ffffff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.85rem;

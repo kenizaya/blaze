@@ -8,7 +8,7 @@ const Product = (props) => {
   return (
     <div className={styles.productCard}>
       <img src={src} alt={name} />
-      <p>{name}</p>
+      <h4>{name}</h4>
       <div className={styles.priceAndIcon}>
         <span className={styles.price}>${price}</span>
         <span className={styles.chevrons}>

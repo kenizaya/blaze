@@ -1,6 +1,8 @@
 .cartContainer {
   display: flex;
   padding: 40px;
-  gap: 40px;
-  flex-wrap: wrap;
+  min-height: 80vh;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
 }

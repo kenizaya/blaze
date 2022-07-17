@@ -4,7 +4,7 @@ export const sweatshirts = [
   {
     id: uuid(),
     src: `${require('../assets/products/sweatshirts/black-oversized-relaxed-cotton-sweatshirt.jpg')}`,
-    name: 'Black Oversized Relaxed Cotton Sweatshirt',
+    name: 'Black Relaxed Cotton Sweatshirt',
     price: '21.99',
     qty: 0,
   },
@@ -18,7 +18,7 @@ export const sweatshirts = [
   {
     id: uuid(),
     src: `${require('../assets/products/sweatshirts/green-solid-round-neck-relaxed-fit-sweatshirt.jpg')}`,
-    name: 'Green Solid Round Neck Relaxed Fit Sweatshirt',
+    name: 'Green Relaxed Fit Sweatshirt',
     price: '23.99',
     qty: 0,
   },

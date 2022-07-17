@@ -12,6 +12,7 @@ const FilterSidebar = () => {
 
   return (
     <div className={styles.sidebarContainer}>
+      <p style={{ fontSize: '2rem' }}>Jackets</p>
       <ul>
         <li onClick={() => setProducts(allProducts)}>All Products</li>
         <li onClick={() => setProducts(sweatshirts)}>Sweatshirts</li>
