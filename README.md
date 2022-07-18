@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+# Blaze - A fashion ecommerce site to keep up with the trend
+
+**Tech Used:**
+- React
+- ContextApi
+- Html
+- CSS
+- Javascript
+- 
+![Blaze](https://user-images.githubusercontent.com/104677763/179635341-5f01fd6d-571f-4385-8438-ae787b7d4918.png)
+
+![Blaze (1)](https://user-images.githubusercontent.com/104677763/179635439-cea64223-a05d-46bc-a668-844af71917e6.png)
+
+![Blaze (2)](https://user-images.githubusercontent.com/104677763/179635495-d14c9976-c222-4059-86e1-856e4a96e63a.png)
+
+![Blaze (3)](https://user-images.githubusercontent.com/104677763/179635681-efc0bf0b-1426-461c-94df-cd19e960f779.png)
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
