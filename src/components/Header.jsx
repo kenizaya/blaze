@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { BsBag, BsBagFill } from 'react-icons/bs'
 import styles from '../styles/Header.module.css'
-import GlobalContext from '../GlobalContext'
+import GlobalContext from '../context/GlobalContext'
 
 const Header = () => {
   const { cart } = useContext(GlobalContext)

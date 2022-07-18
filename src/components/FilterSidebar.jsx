@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { allProducts } from '../data/allProducts'
-import GlobalContext from '../GlobalContext'
+import GlobalContext from '../context/GlobalContext'
 import styles from '../styles/FilterSidebar.module.css'
 
 const FilterSidebar = () => {

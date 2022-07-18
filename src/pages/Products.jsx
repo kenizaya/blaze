@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Product from '../components/Product'
 import FilterSidebar from '../components/FilterSidebar'
 import styles from '../styles/Products.module.css'
-import GlobalContext from '../GlobalContext'
+import GlobalContext from '../context/GlobalContext'
 
 const Products = () => {
   const { products, handleChange, handleIncrease, handleDecrease } =

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import CartProduct from '../components/CartProduct'
 import styles from '../styles/Cart.module.css'
-import GlobalContext from '../GlobalContext'
+import GlobalContext from '../context/GlobalContext'
 
 const Cart = () => {
   const { cart, handleChange, handleIncrease, handleDecrease } =

@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
-import { allProducts } from './data/allProducts'
+import { allProducts } from '../data/allProducts'
 
 const GlobalContext = createContext()
 
