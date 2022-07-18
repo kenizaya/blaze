@@ -15,7 +15,6 @@ const Hero = () => {
           Alias, repudiandae accusamus!
         </p>
         <Link to='/products' className={styles.heroBtn}>
-          {' '}
           SHOP NOW
         </Link>
       </article>

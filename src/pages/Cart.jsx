@@ -1,11 +1,14 @@
 import React, { useContext } from 'react'
 import CartProduct from '../components/CartProduct'
 import styles from '../styles/Cart.module.css'
+import { useNavigate } from 'react-router-dom'
 import GlobalContext from '../context/GlobalContext'
 
 const Cart = () => {
-  const { cart, handleChange, handleIncrease, handleDecrease } =
+  const { cart, clearCart, handleChange, handleIncrease, handleDecrease } =
     useContext(GlobalContext)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -22,7 +25,15 @@ const Cart = () => {
         ))}
         <div className={styles.checkout}>
           <div>Total = ${cart.totalPrice.toFixed(2)}</div>
-          <button className={styles.checkoutBtn}>Checkout</button>
+          <button
+            className={styles.checkoutBtn}
+            onClick={() => {
+              clearCart()
+              navigate('/')
+            }}
+          >
+            Checkout
+          </button>
         </div>
       </div>
     </>

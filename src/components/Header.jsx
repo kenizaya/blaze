@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1>
+      <h1 className={styles.h1}>
         <Link to='/' className={styles.logo}>
           Blaze
         </Link>

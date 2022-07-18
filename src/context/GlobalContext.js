@@ -5,7 +5,7 @@ const GlobalContext = createContext()
 
 export const GlobalProvider = ({ children }) => {
   const [cart, setCart] = useState({
-    items: {},
+    items: [],
     totalItems: 0,
     totalPrice: 0,
     isFilled: false,
@@ -49,28 +49,13 @@ export const GlobalProvider = ({ children }) => {
     })
   }
 
-  const filterProducts = (category) => {
-    setProducts(() => {
-      if (category === 'all') {
-        return allProducts
-      } else {
-        const tempProducts = allProducts.filter(
-          (product) => product.category === category
-        )
-
-        const newProducts = cart.items.filter((item) =>
-          tempProducts.some((product) => item.id === product.id)
-        )
-
-        return [
-          ...newProducts,
-          ...tempProducts.filter((product) =>
-            newProducts.every((item) => item.id !== product.id)
-          ),
-        ]
-      }
+  const clearCart = () =>
+    setCart({
+      items: [],
+      totalItems: 0,
+      totalPrice: 0,
+      isFilled: false,
     })
-  }
 
   useEffect(() => {
     setCart((prevCart) => {
@@ -92,9 +77,9 @@ export const GlobalProvider = ({ children }) => {
       value={{
         cart,
         setCart,
+        clearCart,
         products,
         setProducts,
-        filterProducts,
         handleIncrease,
         handleDecrease,
         handleChange,
