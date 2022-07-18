@@ -24,16 +24,31 @@ const Cart = () => {
           </div>
         ))}
         <div className={styles.checkout}>
-          <div>Total = ${cart.totalPrice.toFixed(2)}</div>
-          <button
-            className={styles.checkoutBtn}
-            onClick={() => {
-              clearCart()
-              navigate('/')
-            }}
-          >
-            Checkout
-          </button>
+          {' '}
+          {cart.totalPrice ? (
+            <>
+              <div>Total = ${cart.totalPrice.toFixed(2)}</div>
+              <button
+                className={styles.checkoutBtn}
+                onClick={() => {
+                  clearCart()
+                  navigate('/')
+                }}
+              >
+                Checkout
+              </button>{' '}
+            </>
+          ) : (
+            <div className={styles.emptyCart}>
+              <h2 className={styles.h2}> Your cart is empty</h2>{' '}
+              <button
+                className={styles.continueShoppingBtn}
+                onClick={() => navigate('/products')}
+              >
+                Continue Shopping
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
