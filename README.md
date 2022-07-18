@@ -6,7 +6,8 @@
 - Html
 - CSS
 - Javascript
-- 
+
+
 ![Blaze](https://user-images.githubusercontent.com/104677763/179635341-5f01fd6d-571f-4385-8438-ae787b7d4918.png)
 
 ![Blaze (1)](https://user-images.githubusercontent.com/104677763/179635439-cea64223-a05d-46bc-a668-844af71917e6.png)
