@@ -8,7 +8,7 @@ import About from './pages/About'
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/blaze'>
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
