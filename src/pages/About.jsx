@@ -13,12 +13,13 @@ const About = () => {
             <div className={styles.underline}></div>
           </div>
           <p className={styles.about}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat
-            earum blanditiis voluptas provident illo inventore recusandae quod
-            obcaecati! Accusamus, amet beatae enim rem corrupti accusantium
-            autem ipsum deserunt esse quibusdam ipsam impedit aut eligendi sequi
-            ullam consequuntur consequatur similique qui labore. Excepturi
-            exercitationem assumenda earum provident aspernatur iure neque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            cupiditate atque voluptates quidem rerum quia ipsum voluptatum
+            numquam reiciendis ab perspiciatis libero repellendus odio quos
+            ullam possimus voluptatem optio quod at magni, aperiam perferendis
+            consequuntur praesentium. Saepe doloribus error, labore recusandae
+            id, quia eligendi veniam officia aliquid in sunt! Placeat est sequi
+            vero nulla laboriosam modi corrupti veritatis adipisci.
           </p>
         </article>
       </section>
