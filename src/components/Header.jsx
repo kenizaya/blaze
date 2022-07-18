@@ -21,7 +21,7 @@ const Header = () => {
           {cart.isFilled ? (
             <>
               <BsBagFill />
-              <div className={styles.cartTotal}>{cart.totalItems}</div>
+              <div className={styles.cartValue}>{cart.totalItems}</div>
             </>
           ) : (
             <BsBag />

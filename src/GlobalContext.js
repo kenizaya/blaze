@@ -5,14 +5,13 @@ const GlobalContext = createContext()
 
 export const GlobalProvider = ({ children }) => {
   const [cart, setCart] = useState({
-    items: [],
+    items: {},
     totalItems: 0,
     totalPrice: 0,
     isFilled: false,
   })
-  const [products, setProducts] = useState(allProducts)
 
-  const [cartItems, setCartItems] = useState([])
+  const [products, setProducts] = useState(allProducts)
 
   const handleIncrease = (id) => {
     setProducts((prevProduct) => {
@@ -39,7 +38,6 @@ export const GlobalProvider = ({ children }) => {
   }
 
   const handleChange = (e, id) => {
-    console.log(e.target.value)
     setProducts((prevProduct) => {
       const newProduct = prevProduct.map((product) => {
         if (product.id === id && product.qty >= 0) {
@@ -51,13 +49,41 @@ export const GlobalProvider = ({ children }) => {
     })
   }
 
+  const filterProducts = (category) => {
+    setProducts(() => {
+      if (category === 'all') {
+        return allProducts
+      } else {
+        const tempProducts = allProducts.filter(
+          (product) => product.category === category
+        )
+
+        const newProducts = cart.items.filter((item) =>
+          tempProducts.some((product) => item.id === product.id)
+        )
+
+        return [
+          ...newProducts,
+          ...tempProducts.filter((product) =>
+            newProducts.every((item) => item.id !== product.id)
+          ),
+        ]
+      }
+    })
+  }
+
   useEffect(() => {
-    setCart({
-      ...cart,
-      items: products.filter((product) => product.qty > 0),
-      totalItems: products.reduce((prev, cur) => prev + cur.qty, 0),
-      totalPrice: products.reduce((prev, cur) => prev + cur.qty * cur.price, 0),
-      isFilled: products.some((product) => product.qty > 0),
+    setCart((prevCart) => {
+      return {
+        ...prevCart,
+        items: products.filter((product) => product.qty > 0),
+        totalItems: products.reduce((prev, cur) => prev + cur.qty, 0),
+        totalPrice: products.reduce(
+          (prev, cur) => prev + cur.qty * cur.price,
+          0
+        ),
+        isFilled: products.some((product) => product.qty > 0),
+      }
     })
   }, [products])
 
@@ -68,6 +94,7 @@ export const GlobalProvider = ({ children }) => {
         setCart,
         products,
         setProducts,
+        filterProducts,
         handleIncrease,
         handleDecrease,
         handleChange,
