@@ -12,3 +12,9 @@
 .active {
   color: #127fbf;
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+}

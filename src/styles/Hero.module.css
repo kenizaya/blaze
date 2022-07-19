@@ -42,3 +42,12 @@
 .heroBtn:active {
   border: none;
 }
+
+@media (max-width: 600px) {
+  .imgContainer {
+    display: none;
+  }
+  .section {
+    display: block;
+  }
+}

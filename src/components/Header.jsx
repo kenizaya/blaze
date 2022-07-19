@@ -9,26 +9,28 @@ const Header = () => {
   const { cart } = useContext(GlobalContext)
 
   return (
-    <header className={styles.header}>
-      <h1 className={styles.h1}>
-        <Link to='/' className={styles.logo}>
-          Blaze
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.h1}>
+          <Link to='/' className={styles.logo}>
+            Blaze
+          </Link>
+        </h1>
+        <Navbar />
+        <Link to='cart' style={{ color: 'black' }}>
+          <div className={styles.cartIcon}>
+            {cart.isFilled ? (
+              <>
+                <BsBagFill />
+                <div className={styles.cartValue}>{cart.totalItems}</div>
+              </>
+            ) : (
+              <BsBag />
+            )}
+          </div>
         </Link>
-      </h1>
-      <Navbar />
-      <Link to='cart' style={{ color: 'black' }}>
-        <div className={styles.cartIcon}>
-          {cart.isFilled ? (
-            <>
-              <BsBagFill />
-              <div className={styles.cartValue}>{cart.totalItems}</div>
-            </>
-          ) : (
-            <BsBag />
-          )}
-        </div>
-      </Link>
-    </header>
+      </header>
+    </div>
   )
 }
 
