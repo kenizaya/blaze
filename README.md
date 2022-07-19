@@ -7,7 +7,7 @@
 - CSS
 - Javascript
 
-**Live link: ** https://kenizaya.github.io/blaze/
+**Live link:** https://kenizaya.github.io/blaze/
 
 
 ![Blaze](https://user-images.githubusercontent.com/104677763/179635341-5f01fd6d-571f-4385-8438-ae787b7d4918.png)
