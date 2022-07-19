@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blaze/static/css/main.6af3a3cf.css",
-    "main.js": "/blaze/static/js/main.30383fdf.js",
+    "main.css": "/blaze/static/css/main.11cc775e.css",
+    "main.js": "/blaze/static/js/main.017c649f.js",
     "static/media/aboutImg.jpg": "/blaze/static/media/aboutImg.84f4c069fcee44ca5300.jpg",
     "static/media/blue-regular-fit-teddy-jacket.jpg": "/blaze/static/media/blue-regular-fit-teddy-jacket.b4da4b03e4b03b13b66b.jpg",
     "static/media/black-oversized-relaxed-cotton-sweatshirt.jpg": "/blaze/static/media/black-oversized-relaxed-cotton-sweatshirt.0553a637d6d3cd639f49.jpg",
@@ -19,11 +19,11 @@
     "static/media/black-flip-flops.jpg": "/blaze/static/media/black-flip-flops.0fed7048e7702de2fc48.jpg",
     "static/media/brown-flip-flops.jpg": "/blaze/static/media/brown-flip-flops.60e1f50f3dc3ad7d4249.jpg",
     "index.html": "/blaze/index.html",
-    "main.6af3a3cf.css.map": "/blaze/static/css/main.6af3a3cf.css.map",
-    "main.30383fdf.js.map": "/blaze/static/js/main.30383fdf.js.map"
+    "main.11cc775e.css.map": "/blaze/static/css/main.11cc775e.css.map",
+    "main.017c649f.js.map": "/blaze/static/js/main.017c649f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6af3a3cf.css",
-    "static/js/main.30383fdf.js"
+    "static/css/main.11cc775e.css",
+    "static/js/main.017c649f.js"
   ]
 }
