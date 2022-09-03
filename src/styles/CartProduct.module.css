@@ -60,3 +60,13 @@ input[type='number'] {
   border-color: transparent;
   color: #0b69a3;
 }
+
+@media (max-width: 600px) {
+  .productCard {
+    width: 450px;
+  }
+  .productImage {
+    width: 120px;
+    height: 150px;
+  }
+}
