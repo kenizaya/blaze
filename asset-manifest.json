@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/blaze/static/css/main.11cc775e.css",
+    "main.css": "/blaze/static/css/main.3cff7d30.css",
     "main.js": "/blaze/static/js/main.017c649f.js",
     "static/media/aboutImg.jpg": "/blaze/static/media/aboutImg.84f4c069fcee44ca5300.jpg",
     "static/media/blue-regular-fit-teddy-jacket.jpg": "/blaze/static/media/blue-regular-fit-teddy-jacket.b4da4b03e4b03b13b66b.jpg",
@@ -19,11 +19,11 @@
     "static/media/black-flip-flops.jpg": "/blaze/static/media/black-flip-flops.0fed7048e7702de2fc48.jpg",
     "static/media/brown-flip-flops.jpg": "/blaze/static/media/brown-flip-flops.60e1f50f3dc3ad7d4249.jpg",
     "index.html": "/blaze/index.html",
-    "main.11cc775e.css.map": "/blaze/static/css/main.11cc775e.css.map",
+    "main.3cff7d30.css.map": "/blaze/static/css/main.3cff7d30.css.map",
     "main.017c649f.js.map": "/blaze/static/js/main.017c649f.js.map"
   },
   "entrypoints": [
-    "static/css/main.11cc775e.css",
+    "static/css/main.3cff7d30.css",
     "static/js/main.017c649f.js"
   ]
 }
