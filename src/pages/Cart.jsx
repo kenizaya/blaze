@@ -31,7 +31,6 @@ const Cart = () => {
               <button
                 className={styles.checkoutBtn}
                 onClick={() => {
-                  clearCart()
                   navigate('/')
                 }}
               >
