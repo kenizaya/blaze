@@ -2,6 +2,39 @@
   display: flex;
   gap: 50px;
   font-size: 1.2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  height: 60px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 60px;
+}
+
+.cartIcon {
+  margin-left: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #102a43;
+  position: relative;
+}
+
+.cartValue {
+  background-color: #102a43;
+  position: absolute;
+  top: 0;
+  left: 24px;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
 }
 
 .link {
@@ -11,6 +44,11 @@
 
 .active {
   color: #127fbf;
+}
+
+.cart-login-wraper {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
