@@ -1,10 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Error from './pages/Error'
 import App from './App'
-import Cart from './pages/Cart'
-import About from './pages/About'
+import {
+  Home,
+  Products,
+  SingleProduct,
+  Checkout,
+  Contact,
+  Error,
+  Cart,
+  About,
+} from './pages'
 
 const RouteSwitch = () => {
   return (
@@ -13,8 +18,11 @@ const RouteSwitch = () => {
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='products' element={<Products />} />
+          <Route path='products/:id' element={<SingleProduct />} />
           <Route path='about' element={<About />} />
           <Route path='cart' element={<Cart />} />
+          <Route path='checkout' element={<Checkout />} />
+          <Route path='contact' element={<Contact />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
