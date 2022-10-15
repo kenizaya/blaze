@@ -5,7 +5,12 @@
   width: 90vw;
   margin: 0 auto;
 }
-
+.logo {
+  height: 60px;
+  width: 120px;
+  object-fit: contain;
+  flex: 1;
+}
 .h1 {
   flex: 1;
 }

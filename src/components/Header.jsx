@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { BsBag, BsBagFill } from 'react-icons/bs'
 import styles from '../styles/Header.module.css'
 import GlobalContext from '../context/GlobalContext'
+import logo from '../assets/logo.png'
 
 const Header = () => {
   const { cart } = useContext(GlobalContext)
@@ -11,11 +12,9 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.h1}>
-          <Link to='/' className={styles.logo}>
-            Blaze
-          </Link>
-        </h1>
+        <Link to='/' className={styles.logo}>
+          <img className={styles.logo} src={logo} alt='Logo' />
+        </Link>
         <Navbar />
         <Link to='cart' style={{ color: 'black' }}>
           <div className={styles.cartIcon}>
