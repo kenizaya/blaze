@@ -34,3 +34,11 @@
   height: 0.25rem;
   background: #127fbf;
 }
+
+@media (max-width: 600px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 8px;
+  }
+}
