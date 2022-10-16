@@ -2,11 +2,13 @@ import { useReducer } from 'react'
 import reducer from '../reducers/products_reducer'
 import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from '../actions'
 import { useContext } from 'react'
+import { PRODUCTS } from '../data/PRODUCTS'
 
 const { createContext } = require('react')
 
 const initialState = {
   isSidebarOpen: false,
+  products: PRODUCTS,
 }
 const ProductsContext = createContext()
 
