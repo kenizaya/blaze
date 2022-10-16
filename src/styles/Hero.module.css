@@ -1,7 +1,7 @@
 .section {
   min-height: 60vh;
   place-items: center;
-  height: calc((100vh -5rem));
+  height: calc((100vh - 5rem));
   width: 95vw;
   margin: 0 auto;
   max-width: 1170px;
