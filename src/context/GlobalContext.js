@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
-import { allProducts } from '../data/allProducts'
+import { PRODUCTS } from '../data/PRODUCTS'
 
 const GlobalContext = createContext()
 
@@ -11,7 +11,7 @@ export const GlobalProvider = ({ children }) => {
     isFilled: false,
   })
 
-  const [products, setProducts] = useState(allProducts)
+  const [products, setProducts] = useState(PRODUCTS)
 
   const handleIncrease = (id) => {
     setProducts((prevProduct) => {
