@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ProductsProvider } from './context/products_context'
 import './index.css'
 import RouteSwitch from './RouteSwitch'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <RouteSwitch />
+    <ProductsProvider>
+      <RouteSwitch />
+    </ProductsProvider>
   </React.StrictMode>
 )

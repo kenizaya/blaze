@@ -7,6 +7,7 @@ import { links } from '../utils/constants'
 import styles from '../styles/Sidebar.module.css'
 import { Link } from 'react-router-dom'
 import { CartLoginButtons } from '../components'
+import { useProductsContext } from '../context/products_context'
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
