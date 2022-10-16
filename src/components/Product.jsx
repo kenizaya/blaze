@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
+// import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styles from '../styles/Product.module.css'
 
 const Product = (props) => {
@@ -11,7 +11,7 @@ const Product = (props) => {
       <h4>{name}</h4>
       <div className={styles['price-and-icon']}>
         <span className={styles.price}>${price}</span>
-        <span className={styles.chevrons}>
+        {/* <span className={styles.chevrons}>
           <button className={styles.chevron} onClick={() => onDecrease(id)}>
             <BsChevronLeft />
           </button>
@@ -23,8 +23,8 @@ const Product = (props) => {
           />
           <button className={styles.chevron} onClick={() => onIncrease(id)}>
             <BsChevronRight />
-          </button>
-        </span>
+          </button> */}
+        {/* </span> */}
       </div>
     </div>
   )
