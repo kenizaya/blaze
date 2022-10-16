@@ -14,13 +14,13 @@ const Hero = () => {
           magnam ratione, repellat placeat nesciunt corporis, fuga distinctio.
           Alias, repudiandae accusamus!
         </p>
-        <Link to='/products' className={styles.heroBtn}>
+        <Link to='/products' className={styles['hero-btn']}>
           SHOP NOW
         </Link>
       </article>
 
-      <article className={styles.imgContainer}>
-        <img src={heroImg} alt='clothes' className={styles.mainImg} />
+      <article className={styles['img-container']}>
+        <img src={heroImg} alt='clothes' className={styles['main-img']} />
       </article>
     </section>
   )

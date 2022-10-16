@@ -12,9 +12,9 @@ const Cart = () => {
 
   return (
     <>
-      <div className={styles.cartContainer}>
+      <div className={styles['cart-container']}>
         {cart.items.map((item) => (
-          <div className={styles.cartProduct} key={item.id}>
+          <div className={styles['cart-product']} key={item.id}>
             <CartProduct
               {...item}
               onIncrease={(id) => handleIncrease(id)}
@@ -29,7 +29,7 @@ const Cart = () => {
             <>
               <div>Total = ${cart.totalPrice.toFixed(2)}</div>
               <button
-                className={styles.checkoutBtn}
+                className={styles['checkout-btn']}
                 onClick={() => {
                   navigate('/')
                 }}
@@ -38,10 +38,10 @@ const Cart = () => {
               </button>{' '}
             </>
           ) : (
-            <div className={styles.emptyCart}>
+            <div className={styles['empty-cart']}>
               <h2 className={styles.h2}> Your cart is empty</h2>{' '}
               <button
-                className={styles.continueShoppingBtn}
+                className={styles['continue-shopping-btn']}
                 onClick={() => navigate('/products')}
               >
                 Continue Shopping

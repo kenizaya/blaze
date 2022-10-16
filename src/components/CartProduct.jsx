@@ -6,10 +6,10 @@ const CartProduct = (props) => {
   const { id, price, src, qty, name, onIncrease, onDecrease, onChange } = props
 
   return (
-    <div className={styles.productCard}>
-      <div className={styles.nameAndPrice}>
+    <div className={styles['product-card']}>
+      <div className={styles['name-and-price']}>
         <h4>{name}</h4>
-        <div className={styles.priceAndIcon}>
+        <div className={styles['price-and-icon']}>
           <span className={styles.price}>${price}</span>
           <span className={styles.chevrons}>
             <button className={styles.chevron} onClick={() => onDecrease(id)}>
@@ -18,7 +18,7 @@ const CartProduct = (props) => {
             <input
               type='number'
               value={qty}
-              className={styles.inputQty}
+              className={styles['input-qty']}
               onChange={(e) => onChange(e, id)}
             />
             <button className={styles.chevron} onClick={() => onIncrease(id)}>
@@ -28,7 +28,7 @@ const CartProduct = (props) => {
           <span> = ${(price * qty).toFixed(2)}</span>
         </div>
       </div>
-      <img className={styles.productImage} src={src} alt={name} />
+      <img className={styles['product-image']} src={src} alt={name} />
     </div>
   )
 }

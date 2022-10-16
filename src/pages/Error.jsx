@@ -4,7 +4,7 @@ import styles from '../styles/Error.module.css'
 
 const Error = () => {
   return (
-    <main className={styles.errorContainer}>
+    <main className={styles['error-container']}>
       <section>
         <h1>404</h1>
         <h3>Sorry, the page doesn't exist</h3>

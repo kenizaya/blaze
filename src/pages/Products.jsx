@@ -8,7 +8,7 @@ const Products = () => {
     useContext(GlobalContext)
 
   return (
-    <div className={styles.productsContainer}>
+    <div className={styles['products-container']}>
       {products.map((item) => (
         <Product
           key={item.id}

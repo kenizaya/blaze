@@ -1,4 +1,4 @@
-.productCard {
+.product-card {
   width: 300px;
   height: 400px;
   margin-bottom: 100px;
@@ -10,30 +10,18 @@
   width: 100%;
 }
 
-.priceAndIcon {
+.price-and-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
 }
 
-.inputQty {
+.input-qty {
   max-width: 40px;
   border: 1px solid #bcccdc;
   border-radius: 4px;
   text-align: center;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type='number'] {
-  -moz-appearance: textfield;
 }
 
 .chevrons {

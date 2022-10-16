@@ -6,10 +6,10 @@ const Product = (props) => {
   const { id, price, src, qty, name, onIncrease, onDecrease, onChange } = props
 
   return (
-    <div className={styles.productCard}>
+    <div className={styles['product-card']}>
       <img src={src} alt={name} className={styles.img} />
       <h4>{name}</h4>
-      <div className={styles.priceAndIcon}>
+      <div className={styles['price-and-icon']}>
         <span className={styles.price}>${price}</span>
         <span className={styles.chevrons}>
           <button className={styles.chevron} onClick={() => onDecrease(id)}>
@@ -18,7 +18,7 @@ const Product = (props) => {
           <input
             type='number'
             value={qty}
-            className={styles.inputQty}
+            className={styles['input-qty']}
             onChange={(e) => onChange(e, id)}
           />
           <button className={styles.chevron} onClick={() => onIncrease(id)}>

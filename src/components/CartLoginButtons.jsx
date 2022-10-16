@@ -12,12 +12,12 @@ const CartLoginButtons = () => {
       <Link to='/' className={styles.link}>
         Login
       </Link>
-      <div className={styles.cartIcon}>
+      <div className={styles['cart-icon']}>
         <Link to='cart' style={{ color: 'black' }}>
           {cart.isFilled ? (
             <>
               <BsBagFill />
-              <div className={styles.cartValue}>{cart.totalItems}</div>
+              <div className={styles['cart-value']}>{cart.totalItems}</div>
             </>
           ) : (
             <BsBag />

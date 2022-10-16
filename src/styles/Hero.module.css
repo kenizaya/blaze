@@ -23,14 +23,14 @@
   font-size: 1.24rem;
 }
 
-.mainImg {
+.main-img {
   width: 100%;
   height: 540px;
   border-radius: 4px;
   object-fit: cover;
 }
 
-.heroBtn {
+.hero-btn {
   padding: 15px 20px;
   background-color: #102a43;
   color: white;
@@ -39,12 +39,12 @@
   border: 1px solid #102a43;
 }
 
-.heroBtn:active {
+.hero-btn:active {
   border: none;
 }
 
 @media (max-width: 600px) {
-  .imgContainer {
+  .img-container {
     display: none;
   }
   .section {
