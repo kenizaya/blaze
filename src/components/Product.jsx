@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatPrice } from '../utils/helpers'
 // import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styles from '../styles/Product.module.css'
 
@@ -10,7 +11,7 @@ const Product = (props) => {
       <img src={src} alt={name} className={styles.img} />
       <h4>{name}</h4>
       <div className={styles['price-and-icon']}>
-        <span className={styles.price}>${price}</span>
+        <span className={styles.price}>{formatPrice(price)}</span>
         {/* <span className={styles.chevrons}>
           <button className={styles.chevron} onClick={() => onDecrease(id)}>
             <BsChevronLeft />

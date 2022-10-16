@@ -5,7 +5,6 @@ import { useProductsContext } from '../context/products_context'
 
 const Products = () => {
   const { products } = useProductsContext()
-  console.log(products[0])
   // const { handleChange, handleIncrease, handleDecrease } =
   //   useContext(GlobalContext)
 
