@@ -1,63 +1,39 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { BsBag, BsBagFill } from 'react-icons/bs'
-import GlobalContext from '../context/GlobalContext'
+import { FaBars } from 'react-icons/fa'
 import logo from '../assets/logo.png'
+import { links } from '../utils/constants'
+import CartLoginButtons from './CartLoginButtons'
 import styles from '../styles/Navbar.module.css'
 
 const Navbar = () => {
-  const { cart } = useContext(GlobalContext)
-
   return (
     <nav className={styles.navbar}>
-      <Link to='/' className={styles.logo}>
-        <img className={styles.logo} src={logo} alt='Logo' />
-      </Link>
-      <ul className={styles['nav-links']}>
-        <NavLink
-          to='/'
-          className={({ isActive }) =>
-            isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to='products'
-          className={({ isActive }) =>
-            isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
-          }
-        >
-          Products
-        </NavLink>
-        <NavLink
-          to='about'
-          className={({ isActive }) =>
-            isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
-          }
-        >
-          About
-        </NavLink>
-      </ul>
-
-      <div className={styles['cart-login-wraper']}>
-        <Link to='/' className={styles.link}>
-          Login
+      <div className={styles['nav-header']}>
+        <Link to='/' className={styles.logo}>
+          <img className={styles.logo} src={logo} alt='Logo' />
         </Link>
-        <div className={styles.cartIcon}>
-          <Link to='cart' style={{ color: 'black' }}>
-            {cart.isFilled ? (
-              <>
-                <BsBagFill />
-                <div className={styles.cartValue}>{cart.totalItems}</div>
-              </>
-            ) : (
-              <BsBag />
-            )}
-          </Link>
-        </div>
+        <button type='button' className={styles['nav-toggle']}>
+          <FaBars />
+        </button>
       </div>
+      <ul className={styles['nav-links']}>
+        {links.map((link) => {
+          return (
+            <NavLink
+              key={link.id}
+              to={link.url}
+              className={({ isActive }) =>
+                isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+              }
+            >
+              {link.text}
+            </NavLink>
+          )
+        })}
+      </ul>
+      <CartLoginButtons />
     </nav>
   )
 }

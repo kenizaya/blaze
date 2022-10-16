@@ -1,9 +1,12 @@
 .navbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   gap: 50px;
+  margin: 0 auto;
   font-size: 1.2rem;
   align-items: center;
-  justify-content: space-evenly;
+  width: 90vw;
+  max-width: 1170px;
 }
 
 .logo {
@@ -15,26 +18,7 @@
 .nav-links {
   display: flex;
   gap: 60px;
-}
-
-.cartIcon {
-  margin-left: 40px;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  color: #102a43;
-  position: relative;
-}
-
-.cartValue {
-  background-color: #102a43;
-  position: absolute;
-  top: 0;
-  left: 24px;
-  color: #ffffff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  justify-content: center;
 }
 
 .link {
@@ -46,13 +30,28 @@
   color: #127fbf;
 }
 
-.cart-login-wraper {
-  display: flex;
-  align-items: center;
+.nav-toggle {
+  display: none;
 }
 
 @media (max-width: 600px) {
-  .navbar {
+  .nav-links {
     display: none;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    background: transparent;
+    border: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #242424;
   }
 }

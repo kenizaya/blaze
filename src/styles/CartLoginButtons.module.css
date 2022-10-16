@@ -1,0 +1,35 @@
+.cart-login-wraper {
+  display: flex;
+  align-items: center;
+}
+
+.cartIcon {
+  margin-left: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #102a43;
+  position: relative;
+}
+
+.cartValue {
+  background-color: #102a43;
+  position: absolute;
+  top: 0;
+  left: 24px;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #102a43;
+}
+
+@media (max-width: 600px) {
+  .cart-login-wraper {
+    display: none;
+  }
+}
