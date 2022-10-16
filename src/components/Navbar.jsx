@@ -6,15 +6,22 @@ import logo from '../assets/logo.png'
 import { links } from '../utils/constants'
 import CartLoginButtons from './CartLoginButtons'
 import styles from '../styles/Navbar.module.css'
+import { useProductsContext } from '../context/products_context'
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext()
+
   return (
     <nav className={styles.navbar}>
       <div className={styles['nav-header']}>
         <Link to='/' className={styles.logo}>
           <img className={styles.logo} src={logo} alt='Logo' />
         </Link>
-        <button type='button' className={styles['nav-toggle']}>
+        <button
+          type='button'
+          className={styles['nav-toggle']}
+          onClick={openSidebar}
+        >
           <FaBars />
         </button>
       </div>

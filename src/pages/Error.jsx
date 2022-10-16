@@ -8,7 +8,9 @@ const Error = () => {
       <section>
         <h1>404</h1>
         <h3>Sorry, the page doesn't exist</h3>
-        <Link to='/'>Back Home</Link>
+        <button type='button' className={styles.btn}>
+          <Link to='/'>Back Home</Link>
+        </button>
       </section>
     </main>
   )

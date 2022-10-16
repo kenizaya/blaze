@@ -6,7 +6,7 @@ import { useContext } from 'react'
 const { createContext } = require('react')
 
 const initialState = {
-  isSidebarOpen: false,
+  isSidebarOpen: true,
 }
 const ProductsContext = createContext()
 

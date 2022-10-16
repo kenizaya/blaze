@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import logo from '../assets/logo.png'
 import { FaTimes } from 'react-icons/fa'
 import cn from 'classnames'
@@ -10,7 +9,8 @@ import { CartLoginButtons } from '../components'
 import { useProductsContext } from '../context/products_context'
 
 const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const { isSidebarOpen, closeSidebar } = useProductsContext()
+
   return (
     <aside
       className={
@@ -24,7 +24,7 @@ const Sidebar = () => {
         <button
           className={styles['close-btn']}
           type='button'
-          onClick={() => setIsSidebarOpen(false)}
+          onClick={closeSidebar}
         >
           <FaTimes />
         </button>
@@ -33,15 +33,19 @@ const Sidebar = () => {
         {links.map(({ id, text, url }) => {
           return (
             <li key={id}>
-              <Link to={url}>{text}</Link>
+              <Link to={url} onClick={closeSidebar}>
+                {text}
+              </Link>
             </li>
           )
         })}
         <li>
-          <Link to='/checkout'>Checkout</Link>
+          <Link to='/checkout' onClick={closeSidebar}>
+            Checkout
+          </Link>
         </li>
       </ul>
-      <CartLoginButtons className={styles['cart-login-wrapper']} />
+      <CartLoginButtons />
     </aside>
   )
 }
