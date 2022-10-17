@@ -210,3 +210,10 @@ export const PRODUCTS = [
     reviews: 390,
   },
 ]
+
+export const PLACEHOLDER_IMAGES = [
+  `${require('../assets/placeholder1')}`,
+  `${require('../assets/placeholder2')}`,
+  `${require('../assets/placeholder3')}`,
+  `${require('../assets/placeholder4')}`,
+]

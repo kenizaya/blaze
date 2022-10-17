@@ -1,5 +1,7 @@
 import React from 'react'
 import { formatPrice } from '../utils/helpers'
+import { Link } from 'react-router-dom'
+
 // import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styles from '../styles/Product.module.css'
 
@@ -8,7 +10,10 @@ const Product = (props) => {
 
   return (
     <div className={styles['product-card']}>
-      <img src={src} alt={name} className={styles.img} />
+      <Link to={`/product/${id}`}>
+        <img src={src} alt={name} className={styles.img} />
+      </Link>
+
       <h4>{name}</h4>
       <div className={styles['price-and-icon']}>
         <span className={styles.price}>{formatPrice(price)}</span>

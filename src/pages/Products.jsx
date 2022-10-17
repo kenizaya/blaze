@@ -2,6 +2,7 @@ import Product from '../components/Product'
 import styles from '../styles/Products.module.css'
 // import GlobalContext from '../context/GlobalContext'
 import { useProductsContext } from '../context/products_context'
+import { Link } from 'react-router-dom'
 
 const Products = () => {
   const { products } = useProductsContext()
@@ -10,10 +11,10 @@ const Products = () => {
 
   return (
     <div className={styles['products-container']}>
-      {products.map((item) => (
+      {products.map((product) => (
         <Product
-          key={item.id}
-          {...item}
+          key={product.id}
+          {...product}
           // onIncrease={(id) => handleIncrease(id)}
           // onDecrease={(id) => handleDecrease(id)}
           // onChange={(e, id) => handleChange(e, id)}
