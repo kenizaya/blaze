@@ -2,7 +2,6 @@ import Product from '../components/Product'
 import styles from '../styles/Products.module.css'
 // import GlobalContext from '../context/GlobalContext'
 import { useProductsContext } from '../context/products_context'
-import { Link } from 'react-router-dom'
 
 const Products = () => {
   const { products } = useProductsContext()

@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom'
 import styles from '../styles/Product.module.css'
 
 const Product = (props) => {
-  const { id, price, src, qty, name, onIncrease, onDecrease, onChange } = props
+  const { id, price, image, qty, name, onIncrease, onDecrease, onChange } =
+    props
 
   return (
     <div className={styles['product-card']}>
       <Link to={`/product/${id}`}>
-        <img src={src} alt={name} className={styles.img} />
+        <img src={image} alt={name} className={styles.img} />
       </Link>
 
       <h4>{name}</h4>
