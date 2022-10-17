@@ -7,7 +7,7 @@ export const PRODUCTS = [
     category: 'jackets',
     stock: 2,
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nisi dolor soluta quos optio cum ipsa sint? Repellendus fuga quaerat assumenda ipsa neque omnis repudiandae ex explicabo quibusdam provident molestias nesciunt esse earum, quasi nam dolorum rerum similique eius autem aut rem. Molestiae accusantium mollitia aliquam neque ratione vitae harum autem aut provident est? Illum voluptate aliquid quia quam laborum?',
     color: 'black',
     qty: 0,
     ratings: 4.9,
@@ -21,7 +21,7 @@ export const PRODUCTS = [
     category: 'jackets',
     stock: 0,
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta dolor quo vitae exercitationem corrupti repellat debitis consequuntur iste eligendi consequatur provident perspiciatis aut ad, atque nam corporis, possimus, eaque officiis earum voluptate est. Temporibus eligendi placeat necessitatibus consequuntur quos at harum non corrupti ipsa aperiam iure ipsum, eaque dolore! Quos obcaecati repellat, sequi explicabo omnis ullam expedita earum eius eum. dsdes',
     color: 'blue',
     qty: 0,
     ratings: 4.3,

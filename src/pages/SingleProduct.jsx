@@ -23,24 +23,29 @@ const SingleProduct = () => {
   const { name, price, description, stock, ratings, reviews, image } = product
 
   return (
-    <div>
-      <Link to='/products'>Back to products</Link>
-      <div>
-        <ProductImages images={[image, ...PLACEHOLDER_IMAGES]} />
-        <section>
-          <h2>{name}</h2>
-          <Ratings ratings={ratings} reviews={reviews} />
-          <h5>{formatPrice(price)}</h5>
-          <p>{description}</p>
-          <p>
-            <span>Available : </span>
-            {stock > 0 ? 'In stock' : 'Out of stock'}
-          </p>
-          <hr />
-          {stock > 0 && <AddToCart product={product} />}
-        </section>
-      </div>
-    </div>
+    <main>
+      <section className={styles.section}>
+        <button type='button' className={styles.btn}>
+          <Link to='/products'>BROWSE MORE</Link>
+        </button>
+
+        <div className={styles['product-center']}>
+          <ProductImages images={[image, ...PLACEHOLDER_IMAGES]} />
+          <section className={styles.content}>
+            <h2 className={styles.title}>{name}</h2>
+            <Ratings ratings={ratings} reviews={reviews} />
+            <h5 className={styles.price}>{formatPrice(price)}</h5>
+            <p className={styles.description}>{description}</p>
+            <p className={styles.stock}>
+              <span>Available : </span>
+              {stock > 0 ? 'In stock' : 'Out of stock'}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart product={product} />}
+          </section>
+        </div>
+      </section>
+    </main>
   )
 }
 

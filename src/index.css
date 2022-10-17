@@ -36,3 +36,8 @@ ul {
 a {
   text-decoration: none;
 }
+
+p {
+  margin-bottom: 1.25rem;
+  color: #102a43;
+}
