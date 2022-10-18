@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { createContext } from 'react'
+import { useContext } from 'react'
 import { useReducer } from 'react'
 import { LOAD_PRODUCTS } from '../actions'
 import reducer from '../reducers/filter_reducer'
@@ -19,4 +20,12 @@ export const FilterProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products })
   }, [products])
+
+  return (
+    <FilterContext.Provider value={{ ...state }}>
+      {children}
+    </FilterContext.Provider>
+  )
 }
+
+export const useFilteredContext = () => useContext(FilterContext)

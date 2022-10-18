@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import logo from '../assets/logo.png'
 import { links } from '../utils/constants'
-import CartLoginButtons from './CartLoginButtons'
+import { CartLoginButtons } from '../components'
 import styles from '../styles/Navbar.module.css'
 import { useProductsContext } from '../context/products_context'
 
