@@ -3,7 +3,6 @@ import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 import styles from '../styles/Ratings.module.css'
 
 const Ratings = ({ ratings, reviews }) => {
-  console.log(ratings, reviews)
   const stars = Array.from({ length: 5 }, (_, index) => {
     return (
       <span key={index}>

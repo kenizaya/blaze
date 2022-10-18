@@ -1,0 +1,23 @@
+.amount-btns {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0 16px;
+}
+
+.amount {
+  font-size: 2.5rem;
+}

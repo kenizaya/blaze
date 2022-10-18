@@ -5,7 +5,6 @@ import styles from '../styles/ProductImages.module.css'
 
 const ProductImages = ({ images }) => {
   const [mainImage, setMainImage] = useState(images[0])
-  console.log(mainImage)
   return (
     <section>
       <img

@@ -17,8 +17,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   height: 100%;
 }
 
@@ -27,7 +27,8 @@
 }
 
 .price {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
   color: #102a43;
 }
 
@@ -61,5 +62,14 @@
   .product-center {
     display: flex;
     flex-direction: column;
+  }
+
+  .content {
+    gap: 6px;
+  }
+  .title {
+    margin-top: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 8px;
   }
 }

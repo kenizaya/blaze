@@ -38,10 +38,10 @@ const SingleProduct = () => {
             <p className={styles.description}>{description}</p>
             <p className={styles.stock}>
               <span>Available : </span>
-              {stock > 0 ? 'In stock' : 'Out of stock'}
+              {stock > 0 ? `${stock}` : 'Out of stock'}
             </p>
             <hr />
-            {stock > 0 && <AddToCart product={product} />}
+            <AddToCart product={product} />
           </section>
         </div>
       </section>
