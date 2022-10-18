@@ -57,7 +57,7 @@
   color: #f7f7f7;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .product-center {
     display: flex;
     flex-direction: column;

@@ -36,7 +36,7 @@ export const PRODUCTS = [
     stock: 4,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'green',
+    color: 'olive',
     qty: 0,
     ratings: 4.6,
     reviews: 7390,
@@ -92,7 +92,7 @@ export const PRODUCTS = [
     stock: 42,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'green',
+    color: 'olive',
     qty: 0,
     ratings: 4.3,
     reviews: 780,
