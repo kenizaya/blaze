@@ -8,7 +8,6 @@ const Footer = () => {
       <a href='https://github.com/kenizaya' target='_blank' rel='noreferrer'>
         kenizaya
       </a>
-      <h5>All rights reserved</h5>
     </div>
   )
 }
