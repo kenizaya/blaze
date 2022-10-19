@@ -18,20 +18,6 @@ const Product = (props) => {
       <h4>{name}</h4>
       <div className={styles['price-and-icon']}>
         <span className={styles.price}>{formatPrice(price)}</span>
-        {/* <span className={styles.chevrons}>
-          <button className={styles.chevron} onClick={() => onDecrease(id)}>
-            <BsChevronLeft />
-          </button>
-          <input
-            type='number'
-            value={qty}
-            className={styles['input-qty']}
-            onChange={(e) => onChange(e, id)}
-          />
-          <button className={styles.chevron} onClick={() => onIncrease(id)}>
-            <BsChevronRight />
-          </button> */}
-        {/* </span> */}
       </div>
     </div>
   )

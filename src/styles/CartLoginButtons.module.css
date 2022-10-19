@@ -28,7 +28,7 @@
   color: #102a43;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 690px) {
   .cart-login-wraper {
     display: none;
   }

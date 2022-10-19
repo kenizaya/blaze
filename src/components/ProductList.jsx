@@ -1,9 +1,9 @@
 import styles from '../styles/Products.module.css'
 import { useFilteredContext } from '../context/filter_context'
-import { GridView } from '../components'
+import { GridView, ListView } from '../components'
 
 const ProductList = () => {
-  const { filteredProducts: products } = useFilteredContext()
+  const { filteredProducts: products, gridView } = useFilteredContext()
 
   if (products.length < 1)
     return (
@@ -12,7 +12,11 @@ const ProductList = () => {
       </h3>
     )
 
-  return <GridView products={products} />
+  return gridView ? (
+    <GridView products={products} />
+  ) : (
+    <ListView products={products} />
+  )
 }
 
 export default ProductList
