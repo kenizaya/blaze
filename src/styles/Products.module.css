@@ -2,6 +2,7 @@
   display: grid;
   margin: 4rem auto;
   justify-content: center;
+  min-height: 80vh;
 }
 
 @media (min-width: 992px) {

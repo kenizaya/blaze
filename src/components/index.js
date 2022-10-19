@@ -9,7 +9,6 @@ import Product from './Product'
 import ProductList from './ProductList'
 import Footer from './Footer'
 import GridView from './GridView'
-import ListView from './ListView'
 
 export {
   Navbar,
@@ -23,5 +22,4 @@ export {
   ProductList,
   Footer,
   GridView,
-  ListView,
 }
