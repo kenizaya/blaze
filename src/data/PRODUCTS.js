@@ -3,7 +3,7 @@ export const PRODUCTS = [
     id: 1,
     image: `${require('../assets/products/jackets/black-water-repellent-shell-jacket.jpg')}`,
     name: 'Black Water Repellent Shell Jacket',
-    price: 3199,
+    price: 10099,
     category: 'jackets',
     stock: 2,
     description:
