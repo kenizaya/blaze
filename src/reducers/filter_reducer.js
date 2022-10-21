@@ -1,18 +1,24 @@
 import {
+  FILTER_PRODUCTS,
   LOAD_PRODUCTS,
   SET_GRID_VIEW,
   SET_LIST_VIEW,
   SORT_PRODUCTS,
+  UPDATE_FILTERS,
   UPDATE_SORT,
 } from '../actions'
 
 const filter_reducer = (state, action) => {
   switch (action.type) {
     case LOAD_PRODUCTS: {
+      let maxPrice = action.payload.map((product) => product.price)
+      maxPrice = Math.max(...maxPrice)
+
       return {
         ...state,
         allProducts: [...action.payload],
         filteredProducts: [...action.payload],
+        filters: { ...state.filters, maxPrice, price: maxPrice },
       }
     }
     case SET_GRID_VIEW: {
@@ -39,6 +45,13 @@ const filter_reducer = (state, action) => {
       }
 
       return { ...state, filteredProducts: tempProducts }
+    }
+    case UPDATE_FILTERS: {
+      const { name, value } = action.payload
+      return { ...state, filters: { ...state.filters, [name]: value } }
+    }
+    case FILTER_PRODUCTS: {
+      return state
     }
     default:
       return state
