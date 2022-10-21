@@ -42,7 +42,9 @@ const Filters = () => {
                     type='button'
                     name='category'
                     className={`${
-                      cat.toLowerCase() === category ? styles.active : null
+                      cat.toLowerCase() === category
+                        ? cn(styles.active, styles.btn)
+                        : styles.btn
                     }`}
                   >
                     {cat}
@@ -60,12 +62,13 @@ const Filters = () => {
                   return (
                     <button
                       key={index}
+                      name='color'
                       onClick={updateFilters}
                       data-color='all'
                       className={
                         color === 'all'
-                          ? cn(styles['all-btn'], styles.active)
-                          : null
+                          ? cn(styles['all-btn'], styles.active, styles.btn)
+                          : styles.btn
                       }
                     >
                       All
@@ -75,17 +78,26 @@ const Filters = () => {
                 return (
                   <button
                     key={index}
+                    style={{ background: col }}
                     onClick={updateFilters}
                     type='button'
                     name='color'
                     data-color={col}
                     className={`${
                       col === color
-                        ? cn(styles.active, styles['color-btn'])
-                        : styles['color-btn']
+                        ? cn(styles.active, styles['color-btn'], styles.btn)
+                        : cn(styles['color-btn'], styles.btn)
                     }`}
                   >
-                    {color === col ? <FaCheck /> : null}
+                    {color === col ? (
+                      <FaCheck
+                        color={
+                          color === 'white' || color === 'beige'
+                            ? '#222222'
+                            : '#f7f7f7'
+                        }
+                      />
+                    ) : null}
                   </button>
                 )
               })}
@@ -105,22 +117,26 @@ const Filters = () => {
             />
           </div>
 
-          <div className={cn(styles['form-control'], styles.stock)}>
+          <div className={cn(styles['form-control'])}>
             <h5>Availability</h5>
-            <label htmlFor='stock'>Include out of stock</label>
-            <input
-              type='checkbox'
-              name='stock'
-              id='stock'
-              onChange={updateFilters}
-              checked={stock}
-            />
+
+            <div className={styles.stock}>
+              <label htmlFor='stock'>Include out of stock</label>
+              <input
+                type='checkbox'
+                name='stock'
+                id='stock'
+                onChange={updateFilters}
+                checked={stock}
+                className={styles.checkbox}
+              />
+            </div>
           </div>
         </form>
         <button
           type='button'
           onClick={clearFilters}
-          className={styles['clear-btn']}
+          className={cn(styles['clear-btn'], styles.btn)}
         >
           Clear Filters
         </button>

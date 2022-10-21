@@ -8,7 +8,7 @@ export const PRODUCTS = [
     stock: 2,
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nisi dolor soluta quos optio cum ipsa sint? Repellendus fuga quaerat assumenda ipsa neque omnis repudiandae ex explicabo quibusdam provident molestias nesciunt esse earum, quasi nam dolorum rerum similique eius autem aut rem. Molestiae accusantium mollitia aliquam.',
-    color: 'black',
+    color: '#242424',
     qty: 0,
     ratings: 4.9,
     reviews: 420,
@@ -22,7 +22,7 @@ export const PRODUCTS = [
     stock: 0,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nisi dolor soluta quos optio cum ipsa sint? Repellendus fuga quaerat assumenda ipsa neque omnis repudiandae ex explicabo quibusdam provident molestias nesciunt esse earum, quasi nam dolorum rerum similique eius autem aut rem. Molestiae accusantium mollitia aliquam.',
-    color: 'blue',
+    color: '#000080',
     qty: 0,
     ratings: 4.3,
     reviews: 69,
@@ -64,7 +64,7 @@ export const PRODUCTS = [
     stock: 69,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'black',
+    color: '#242424',
     qty: 0,
     ratings: 4.9,
     reviews: 1390,
@@ -106,7 +106,7 @@ export const PRODUCTS = [
     stock: 21,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'brown',
+    color: '#964B00',
     qty: 0,
     ratings: 4.5,
     reviews: 670,
@@ -120,7 +120,7 @@ export const PRODUCTS = [
     stock: 0,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'blue',
+    color: '#000080',
     qty: 0,
     ratings: 4.7,
     reviews: 460,
@@ -190,7 +190,7 @@ export const PRODUCTS = [
     stock: 0,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'black',
+    color: '#242424',
     qty: 0,
     ratings: 4.7,
     reviews: 460,
@@ -204,7 +204,7 @@ export const PRODUCTS = [
     stock: 1,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
-    color: 'brown',
+    color: '#964B00',
     qty: 0,
     ratings: 4.4,
     reviews: 390,

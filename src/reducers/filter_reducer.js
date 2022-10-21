@@ -78,9 +78,8 @@ const filter_reducer = (state, action) => {
         tempProducts = tempProducts.filter((product) => product.color === color)
       }
 
-      if (price) {
-        tempProducts = tempProducts.filter((product) => product.price <= price)
-      }
+      // price
+      tempProducts = tempProducts.filter((product) => product.price <= price)
 
       if (!stock) {
         tempProducts = tempProducts.filter((product) => product.stock > 0)

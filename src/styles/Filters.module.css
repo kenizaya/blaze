@@ -1,0 +1,96 @@
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control h5 {
+  margin-bottom: 8px;
+}
+
+.search-input {
+  padding: 8px;
+  background: #efefef;
+  border-radius: 4px;
+  border-color: transparent;
+  letter-spacing: 1.5px;
+}
+
+.btn {
+  display: block;
+  margin: 4px 0;
+  padding: 4px 0;
+  text-transform: capitalize;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  letter-spacing: 1.5px;
+  color: #334e68;
+  cursor: pointer;
+}
+
+.active {
+  border-color: #334e68;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.color-btn {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #102a43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.color-btn svg {
+  font-size: 8px;
+}
+
+.all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.active {
+  opacity: 1;
+}
+
+.price {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.stock {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 1rem;
+  column-gap: 12px;
+}
+
+.checkbox {
+  width: 16px;
+}
+
+.clear-btn {
+  background-color: #a61b1b;
+  color: #f7f7f7;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+@media (min-width: 690px) {
+  .content {
+    position: sticky;
+    top: 16px;
+  }
+}
