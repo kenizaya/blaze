@@ -1,4 +1,5 @@
 import {
+  CLEAR_FILTERS,
   FILTER_PRODUCTS,
   LOAD_PRODUCTS,
   SET_GRID_VIEW,
@@ -51,7 +52,21 @@ const filter_reducer = (state, action) => {
       return { ...state, filters: { ...state.filters, [name]: value } }
     }
     case FILTER_PRODUCTS: {
+      console.log('first')
       return state
+    }
+    case CLEAR_FILTERS: {
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          text: '',
+          category: '',
+          color: 'all',
+          price: state.filters.maxPrice,
+          stock: 0,
+        },
+      }
     }
     default:
       return state

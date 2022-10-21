@@ -3,6 +3,7 @@ import { createContext } from 'react'
 import { useContext } from 'react'
 import { useReducer } from 'react'
 import {
+  CLEAR_FILTERS,
   FILTER_PRODUCTS,
   LOAD_PRODUCTS,
   SET_GRID_VIEW,
@@ -26,6 +27,7 @@ const initialState = {
     minPrice: 0,
     maxPrice: 0,
     price: 0,
+    stock: 1,
   },
 }
 
@@ -48,10 +50,17 @@ export const FilterProvider = ({ children }) => {
   }
 
   const updateFilters = (e) => {
-    const { name, value } = e.target
+    let { name, value } = e.target
+    if (name === 'category') value = e.target.textContent
+    if (name === 'color') value = e.target.dataset.color
+    if (name === 'price') value = Number(value)
+    if (name === 'stock') value = e.target.checked
+
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } })
   }
-  const clearFilters = (e) => {}
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS })
+  }
 
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products })
