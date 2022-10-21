@@ -1,7 +1,7 @@
 .products-container {
   display: grid;
   gap: 32px 24px;
-  margin: 0 20px;
+  width: 100%;
   justify-content: center;
 }
 

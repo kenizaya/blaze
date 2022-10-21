@@ -1,0 +1,58 @@
+.section {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  column-gap: 24px;
+  margin-bottom: 24px;
+}
+
+.p,
+.label {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-container button {
+  background: transparent;
+  border: 1px solid #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-container button svg {
+  font-size: 1rem;
+}
+
+.btn-container .active {
+  background: #222222;
+  color: #f7f7f7;
+}
+
+.sort-input {
+  border: transparent;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  padding: 4px 8px;
+}
+
+@media (max-width: 690px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+}

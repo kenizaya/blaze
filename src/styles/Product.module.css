@@ -1,6 +1,6 @@
 .product-card {
   width: 100%;
-  line-height: 2;
+  line-height: 1.4;
 }
 
 .img {
@@ -9,34 +9,6 @@
   transition: all 0.3s linear;
 }
 
-.price-and-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.price {
   font-size: 0.9rem;
-}
-
-.input-qty {
-  max-width: 40px;
-  border: 1px solid #bcccdc;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.chevrons {
-  display: flex;
-  gap: 10px;
-}
-
-.chevron {
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: #0b69a3;
-}
-
-@media (max-width: 1170px) {
-  .product-card {
-    max-width: 380px;
-  }
 }
