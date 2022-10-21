@@ -22,7 +22,7 @@ const initialState = {
   sort: 'price-high',
   filters: {
     text: '',
-    category: '',
+    category: 'all',
     color: 'all',
     minPrice: 0,
     maxPrice: 0,

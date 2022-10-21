@@ -68,6 +68,24 @@ const filter_reducer = (state, action) => {
         )
       }
 
+      if (category !== 'all') {
+        tempProducts = tempProducts.filter(
+          (product) => product.category === category
+        )
+      }
+
+      if (color !== 'all') {
+        tempProducts = tempProducts.filter((product) => product.color === color)
+      }
+
+      if (price) {
+        tempProducts = tempProducts.filter((product) => product.price <= price)
+      }
+
+      if (!stock) {
+        tempProducts = tempProducts.filter((product) => product.stock > 0)
+      }
+
       return { ...state, filteredProducts: tempProducts }
     }
     case CLEAR_FILTERS: {
@@ -76,7 +94,7 @@ const filter_reducer = (state, action) => {
         filters: {
           ...state.filters,
           text: '',
-          category: '',
+          category: 'all',
           color: 'all',
           price: state.filters.maxPrice,
           stock: 1,
