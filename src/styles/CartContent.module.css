@@ -1,0 +1,28 @@
+.section {
+  margin: 0 20px;
+  padding: 64px 0;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.link-btn {
+  background: #102a43;
+  border-color: transparent;
+  border-radius: 4px;
+  color: #f7f7f7;
+  padding: 4px 8px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+.link-btn a {
+  color: #f7f7f7;
+}
+
+.clear-btn {
+  background-color: #a61b1b;
+}

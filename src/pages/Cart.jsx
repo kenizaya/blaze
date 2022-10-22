@@ -22,7 +22,6 @@ const Cart = () => {
   }
   return (
     <main className={styles.main}>
-      <p>hi</p>
       <CartContent />
     </main>
   )
