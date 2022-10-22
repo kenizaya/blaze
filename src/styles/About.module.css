@@ -1,12 +1,12 @@
 .section {
-  padding-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-content: center;
   gap: 4rem;
   width: 95vw;
   margin: 0 auto;
   max-width: 1170px;
-  min-height: calc(100vh - (7rem));
+  min-height: calc(100vh - 6rem);
 }
 
 .img {
@@ -20,7 +20,6 @@
   line-height: 2;
   max-width: 45em;
   margin: 0 auto;
-  margin-top: 2rem;
   color: #486581;
 }
 
@@ -35,7 +34,7 @@
   background: #127fbf;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 790px) {
   .section {
     display: flex;
     flex-direction: column;

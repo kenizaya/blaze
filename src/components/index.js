@@ -10,6 +10,7 @@ import ProductList from './ProductList'
 import Footer from './Footer'
 import GridView from './GridView'
 import ListView from './ListView'
+import CartContent from './CartContent'
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   Footer,
   GridView,
   ListView,
+  CartContent,
 }

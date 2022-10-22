@@ -17,8 +17,16 @@ export const CartProvider = ({ children }) => {
   const addToCart = (id, color, amount, product) => {
     dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } })
   }
+
+  const removeItem = (id) => {}
+
+  const changeAmount = (id, value) => {}
+
+  const clearCart = () => {}
   return (
-    <CartContext.Provider value={{ ...state, addToCart }}>
+    <CartContext.Provider
+      value={{ ...state, addToCart, removeItem, changeAmount, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   )
