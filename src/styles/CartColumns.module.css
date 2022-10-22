@@ -1,0 +1,25 @@
+.div {
+  display: none;
+}
+
+@media (min-width: 690px) {
+  .div {
+    display: block;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 320px repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 16px;
+  }
+
+  .content h5 {
+    color: #334e68;
+    font-weight: 500;
+  }
+
+  .div hr {
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+}
