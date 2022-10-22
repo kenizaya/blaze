@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { CartProvider } from './context/cart_context'
 import { FilterProvider } from './context/filter_context'
 import { ProductsProvider } from './context/products_context'
 import './index.css'
@@ -10,7 +11,9 @@ root.render(
   <React.StrictMode>
     <ProductsProvider>
       <FilterProvider>
-        <RouteSwitch />
+        <CartProvider>
+          <RouteSwitch />
+        </CartProvider>
       </FilterProvider>
     </ProductsProvider>
   </React.StrictMode>
