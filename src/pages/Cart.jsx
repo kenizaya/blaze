@@ -6,7 +6,6 @@ import styles from '../styles/Cart.module.css'
 
 const Cart = () => {
   const { cart } = useCartContext()
-  console.log(cart)
 
   if (cart.length < 1) {
     return (

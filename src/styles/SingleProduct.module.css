@@ -35,6 +35,7 @@
 .description {
   line-height: 1.6;
   max-width: 45rem;
+  opacity: 0.85;
 }
 
 .stock {
@@ -69,7 +70,14 @@
   }
   .title {
     margin-top: 1.8rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 1.05rem;
+  }
+  .price {
+    font-size: 1.2rem;
   }
 }

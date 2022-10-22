@@ -7,6 +7,7 @@ import { CartColumns, CartItem, CartTotal } from '../components'
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext()
+  console.log(cart)
   return (
     <section className={styles.section}>
       <CartColumns />
