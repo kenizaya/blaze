@@ -9,8 +9,12 @@ import AmountButtons from './AmountButtons'
 const CartItem = ({ id, name, image, color, amount, price }) => {
   const { removeItem, changeAmount } = useCartContext()
 
-  const increase = () => {}
-  const decrease = () => {}
+  const increase = () => {
+    changeAmount(id, 'inc')
+  }
+  const decrease = () => {
+    changeAmount(id, 'dec')
+  }
 
   return (
     <article className={styles.article}>
