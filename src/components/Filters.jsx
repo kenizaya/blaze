@@ -17,9 +17,9 @@ const Filters = () => {
   const colors = getUniqueValues(allProducts, 'color')
 
   return (
-    <section>
+    <section className={styles.section}>
       <div className={styles.content}>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
           <div className={styles['form-control']}>
             <input
               type='text'
@@ -30,106 +30,108 @@ const Filters = () => {
               onChange={updateFilters}
             />
           </div>
-
-          <div className={styles['form-control']}>
-            <h5>Category</h5>
-            <div>
-              {categories.map((cat, index) => {
-                return (
-                  <button
-                    key={index}
-                    onClick={updateFilters}
-                    type='button'
-                    name='category'
-                    className={`${
-                      cat.toLowerCase() === category
-                        ? cn(styles.active, styles.btn)
-                        : styles.btn
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-
-          <div className={styles['form-control']}>
-            <h5>Colors</h5>
-            <div className={styles.colors}>
-              {colors.map((col, index) => {
-                if (col === 'all')
+          <div className={styles['filters-mobile']}>
+            <div className={styles['form-control']}>
+              <h5>Category</h5>
+              <div>
+                {categories.map((cat, index) => {
                   return (
                     <button
                       key={index}
-                      name='color'
                       onClick={updateFilters}
-                      data-color='all'
-                      className={
-                        color === 'all'
-                          ? cn(styles['all-btn'], styles.active, styles.btn)
+                      type='button'
+                      name='category'
+                      className={`${
+                        cat.toLowerCase() === category
+                          ? cn(styles.active, styles.btn)
                           : styles.btn
-                      }
+                      }`}
                     >
-                      All
+                      {cat}
                     </button>
                   )
-
-                return (
-                  <button
-                    key={index}
-                    style={{ background: col }}
-                    onClick={updateFilters}
-                    type='button'
-                    name='color'
-                    data-color={col}
-                    className={`${
-                      col === color
-                        ? cn(styles.active, styles['color-btn'], styles.btn)
-                        : cn(styles['color-btn'], styles.btn)
-                    }`}
-                  >
-                    {color === col ? (
-                      <FaCheck
-                        color={
-                          color === 'white' || color === 'beige'
-                            ? '#222222'
-                            : '#f7f7f7'
-                        }
-                      />
-                    ) : null}
-                  </button>
-                )
-              })}
+                })}
+              </div>
             </div>
-          </div>
+            <div>
+              <div className={styles['form-control']}>
+                <h5>Colors</h5>
+                <div className={styles.colors}>
+                  {colors.map((col, index) => {
+                    if (col === 'all')
+                      return (
+                        <button
+                          key={index}
+                          name='color'
+                          onClick={updateFilters}
+                          data-color='all'
+                          className={
+                            color === 'all'
+                              ? cn(styles['all-btn'], styles.active, styles.btn)
+                              : styles.btn
+                          }
+                        >
+                          All
+                        </button>
+                      )
 
-          <div className={styles['form-control']}>
-            <h5>Price</h5>
-            <p className={styles.price}>{formatPrice(price)}</p>
-            <input
-              type='range'
-              name='price'
-              min={minPrice}
-              max={maxPrice}
-              value={price}
-              onChange={updateFilters}
-            />
-          </div>
+                    return (
+                      <button
+                        key={index}
+                        style={{ background: col }}
+                        onClick={updateFilters}
+                        type='button'
+                        name='color'
+                        data-color={col}
+                        className={`${
+                          col === color
+                            ? cn(styles.active, styles['color-btn'], styles.btn)
+                            : cn(styles['color-btn'], styles.btn)
+                        }`}
+                      >
+                        {color === col ? (
+                          <FaCheck
+                            color={
+                              color === 'white' || color === 'beige'
+                                ? '#222222'
+                                : '#f7f7f7'
+                            }
+                          />
+                        ) : null}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
 
-          <div className={cn(styles['form-control'])}>
-            <h5>Availability</h5>
+              <div className={styles['form-control']}>
+                <h5>Price</h5>
+                <p className={styles.price}>{formatPrice(price)}</p>
+                <input
+                  type='range'
+                  name='price'
+                  min={minPrice}
+                  max={maxPrice}
+                  value={price}
+                  onChange={updateFilters}
+                />
+              </div>
 
-            <div className={styles.stock}>
-              <label htmlFor='stock'>Include out of stock</label>
-              <input
-                type='checkbox'
-                name='stock'
-                id='stock'
-                onChange={updateFilters}
-                checked={stock}
-                className={styles.checkbox}
-              />
+              <div className={cn(styles['form-control'])}>
+                <h5>Availability</h5>
+
+                <div className={styles.stock}>
+                  <label htmlFor='stock'>Include out of stock</label>
+                  <input
+                    type='checkbox'
+                    name='stock'
+                    id='stock'
+                    onChange={updateFilters}
+                    checked={stock}
+                    className={styles.checkbox}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </form>

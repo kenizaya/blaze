@@ -4,7 +4,9 @@ import styles from '../styles/Products.module.css'
 const Products = () => {
   return (
     <main className={styles.container}>
-      <Filters />
+      <div className={styles.filters}>
+        <Filters />
+      </div>
       <div>
         <Sort />
         <ProductList />

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFilteredContext } from '../context/filter_context'
-import { BsFillGridFill, BsList } from 'react-icons/bs'
+import { BsFillGridFill, BsList, BsFilter } from 'react-icons/bs'
 import styles from '../styles/Sort.module.css'
+import Filters from './Filters'
 
 const Sort = () => {
+  const [showFilters, setShowFilters] = useState(false)
   const {
     filteredProducts: products,
     gridView,
@@ -15,21 +17,34 @@ const Sort = () => {
   return (
     <section className={styles.section}>
       <div className={styles['btn-container']}>
-        <button
-          type='button'
-          onClick={setGridView}
-          className={gridView ? styles.active : null}
-        >
-          <BsFillGridFill />
-        </button>
-        <button
-          type='button'
-          onClick={setListView}
-          className={!gridView ? styles.active : null}
-        >
-          <BsList />
-        </button>
+        <div className={styles['view-btn']}>
+          <button
+            type='button'
+            onClick={setGridView}
+            className={gridView ? styles.active : null}
+          >
+            <BsFillGridFill />
+          </button>
+          <button
+            type='button'
+            onClick={setListView}
+            className={!gridView ? styles.active : null}
+          >
+            <BsList />
+          </button>
+        </div>
+        <div className={styles['filters-btn']}>
+          <button
+            type='button'
+            onClick={() =>
+              setShowFilters((prevShowFilters) => !prevShowFilters)
+            }
+          >
+            <BsFilter />
+          </button>
+        </div>
       </div>
+      {showFilters && <Filters />}
       <p className={styles.p}>{products.length} Products Found</p>
       <hr />
       <form>

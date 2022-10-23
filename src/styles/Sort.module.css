@@ -19,6 +19,12 @@
 .btn-container {
   display: flex;
   gap: 8px;
+  justify-content: space-between;
+}
+
+.view-btn {
+  display: flex;
+  gap: 8px;
 }
 
 .btn-container button {
@@ -54,5 +60,11 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 12px;
+  }
+}
+
+@media (min-width: 690px) {
+  .filters-btn {
+    display: none;
   }
 }

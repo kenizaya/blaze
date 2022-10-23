@@ -40,8 +40,14 @@
 
 .btn {
   padding: 8px 16px;
-  background-color: #102a43;
+  background-color: #243b53;
   border-radius: 4px;
+  cursor: pointer;
+  border: transparent;
+}
+
+.btn:hover {
+  background-color: #102a43;
 }
 
 .btn a {

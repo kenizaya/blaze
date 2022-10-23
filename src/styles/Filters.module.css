@@ -93,8 +93,18 @@
 }
 
 @media (min-width: 690px) {
-  .content {
+  .section {
     position: sticky;
     top: 16px;
+  }
+}
+
+@media (max-width: 690px) {
+  .search-input {
+    width: 100%;
+  }
+  .filters-mobile {
+    display: flex;
+    justify-content: space-between;
   }
 }
