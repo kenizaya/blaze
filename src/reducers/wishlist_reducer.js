@@ -18,7 +18,7 @@ const wishlist_reducer = (state, action) => {
       return { ...state, wishlist: tempWishlist }
     }
     case CLEAR_WISHLIST: {
-      return { ...state, wishlist: [] }
+      return { ...state, wishlist: [], wishlistedItemIds: [] }
     }
     case UPDATE_WISHLISTED_ITEM_IDS: {
       const { id, value } = action.payload

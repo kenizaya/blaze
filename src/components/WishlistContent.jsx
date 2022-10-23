@@ -32,7 +32,6 @@ const WishlistContent = () => {
             <button
               type='button'
               className={cn(styles['link-btn'], styles['cart-btn'])}
-              onClick={clearWishlist}
             >
               Go To Cart
             </button>

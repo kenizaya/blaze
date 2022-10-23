@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { WishlistContent } from '../components'
 import { useWishlistContext } from '../context/wishlist_context'
-import styles from '../styles/Cart.module.css'
+import styles from '../styles/Wishlist.module.css'
 
 const Wishlist = () => {
   const { wishlist } = useWishlistContext()

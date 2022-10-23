@@ -28,3 +28,9 @@
 .btn a {
   color: #f7f7f7;
 }
+
+@media (max-width: 690px) {
+  .empty h2 {
+    font-size: 2rem;
+  }
+}
