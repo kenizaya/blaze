@@ -9,7 +9,7 @@ import styles from '../styles/Navbar.module.css'
 import { useProductsContext } from '../context/products_context'
 
 const Navbar = () => {
-  const { openSidebar } = useProductsContext()
+  const { isSidebarOpen, openSidebar } = useProductsContext()
 
   return (
     <nav className={styles.navbar}>
@@ -40,7 +40,9 @@ const Navbar = () => {
           )
         })}
       </ul>
-      <CartLoginButtons />
+      <div className={styles['cart-login-wrapper']}>
+        <CartLoginButtons />
+      </div>
     </nav>
   )
 }

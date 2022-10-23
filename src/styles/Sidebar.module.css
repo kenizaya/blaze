@@ -23,7 +23,8 @@
 }
 
 .links {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
+  padding-left: 24px;
 }
 
 .links a {
@@ -32,13 +33,14 @@
   font-size: 1rem;
   text-transform: capitalize;
   padding: 1rem 0;
-  color: #222;
+  color: #334e68;
   letter-spacing: 0.1rem;
   transition: all 0.2s linear;
 }
 
 .links a:hover {
   padding-left: 1rem;
+  color: #102a43;
 }
 
 .logo {
@@ -49,13 +51,18 @@
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: rgb(97, 17, 17);
+  color: #ba2525;
   cursor: pointer;
   margin-top: 0.2rem;
 }
 
 .close-btn:hover {
-  color: red;
+  color: #a61b1b;
+}
+
+.cart-login-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 690px) {
@@ -63,9 +70,3 @@
     display: none;
   }
 }
-
-/* @media (max-width: 600px) {
-  .cart-login-wraper {
-    margin: 2rem auto;
-  }
-} */

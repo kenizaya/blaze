@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import cn from 'classnames'
 import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/WishlistContent.module.css'
-import { Columns, WishlistItem } from '../components'
+import { WishlistItem } from '../components'
 
 const WishlistContent = () => {
   const { wishlist, clearWishlist } = useWishlistContext()

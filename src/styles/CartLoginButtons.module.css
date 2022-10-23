@@ -44,6 +44,6 @@
 
 @media (max-width: 690px) {
   .cart-login-wraper {
-    display: none;
+    gap: 50px;
   }
 }

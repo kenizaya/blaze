@@ -4,20 +4,11 @@ import cn from 'classnames'
 import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/WishlistItem.module.css'
 import { formatPrice } from '../utils/helpers'
-import AmountButtons from './AmountButtons'
 import AddToCartButton from './AddToCartButton'
 
 const WishlistItem = ({ product }) => {
   const { id, name, image, color, price } = product
-  const { removeItemFromWishlist, changeWishlistItemAmount } =
-    useWishlistContext()
-
-  const increase = () => {
-    changeWishlistItemAmount(id, 'inc')
-  }
-  const decrease = () => {
-    changeWishlistItemAmount(id, 'dec')
-  }
+  const { removeItemFromWishlist } = useWishlistContext()
 
   return (
     <article className={styles.article}>
