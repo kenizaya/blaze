@@ -1,4 +1,3 @@
-import CartProduct from './CartProduct'
 import CartLoginButtons from './CartLoginButtons'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
@@ -11,14 +10,15 @@ import Footer from './Footer'
 import GridView from './GridView'
 import ListView from './ListView'
 import CartContent from './CartContent'
-import CartColumns from './CartColumns'
+import Columns from './Columns'
 import CartItem from './CartItem'
 import CartTotal from './CartTotal'
+import WishlistContent from './WishlistContent'
+import WishlistItem from './WishlistItem'
 
 export {
   Navbar,
   Sidebar,
-  CartProduct,
   CartLoginButtons,
   Hero,
   Product,
@@ -29,7 +29,9 @@ export {
   GridView,
   ListView,
   CartContent,
-  CartColumns,
+  Columns,
   CartItem,
   CartTotal,
+  WishlistContent,
+  WishlistItem,
 }

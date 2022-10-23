@@ -1,0 +1,30 @@
+.main {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.empty {
+  text-align: center;
+}
+
+.empty h2 {
+  margin-bottom: 16px;
+  font-size: 3rem;
+}
+
+.btn {
+  margin-top: 16px;
+  background: #102a43;
+  border-color: transparent;
+  border-radius: 4px;
+  color: #f7f7f7;
+  padding: 8px 16px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+.btn a {
+  color: #f7f7f7;
+}

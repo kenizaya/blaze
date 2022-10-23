@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { CartProvider } from './context/cart_context'
 import { FilterProvider } from './context/filter_context'
 import { ProductsProvider } from './context/products_context'
+import { WishlistProvider } from './context/wishlist_context'
 import './index.css'
 import RouteSwitch from './RouteSwitch'
 
@@ -12,7 +13,9 @@ root.render(
     <ProductsProvider>
       <FilterProvider>
         <CartProvider>
-          <RouteSwitch />
+          <WishlistProvider>
+            <RouteSwitch />
+          </WishlistProvider>
         </CartProvider>
       </FilterProvider>
     </ProductsProvider>

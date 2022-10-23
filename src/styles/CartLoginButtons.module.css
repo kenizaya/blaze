@@ -1,15 +1,20 @@
 .cart-login-wraper {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 54px;
 }
 
-.cart-icon {
+.cart-icon,
+.wishlist-icon {
   font-size: 1.5rem;
-  display: flex;
+  display: inline-block;
   align-items: center;
   color: #102a43;
   position: relative;
+}
+
+.wishlist-icon {
+  align-self: flex-end;
 }
 
 .cart-value {
@@ -26,6 +31,12 @@
 .link {
   text-decoration: none;
   color: #102a43;
+}
+
+@media (max-width: 875px) {
+  .cart-login-wraper {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 690px) {

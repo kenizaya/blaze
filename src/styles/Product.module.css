@@ -3,12 +3,34 @@
   line-height: 1.4;
 }
 
+.name {
+  color: #222222;
+}
+
+.name:hover {
+  color: #127fbf;
+}
+
 .img {
   width: 100%;
   object-fit: cover;
   transition: all 0.3s linear;
 }
 
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .price {
   font-size: 0.9rem;
+}
+
+.wishlist {
+  cursor: pointer;
+}
+
+.wishlist svg:hover {
+  fill: #127fbf;
 }

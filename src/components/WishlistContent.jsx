@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
-import { useCartContext } from '../context/cart_context'
-import styles from '../styles/CartContent.module.css'
-import { Columns, CartItem, CartTotal } from '../components'
+import { useWishlistContext } from '../context/wishlist_context'
+import styles from '../styles/WishlistContent.module.css'
+import { Columns, WishlistItem } from '../components'
 
-const CartContent = () => {
-  const { cart, clearCart } = useCartContext()
+const WishlistContent = () => {
+  const { wishlist, clearWishlist } = useWishlistContext()
   return (
     <section className={styles.section}>
       <Columns />
-      {cart.map((item) => (
-        <CartItem key={item.id} {...item} />
+      {wishlist.map((item) => (
+        <WishlistItem key={item.id} {...item} />
       ))}
       <hr />
       <div className={styles['link-container']}>
@@ -21,14 +21,13 @@ const CartContent = () => {
         <button
           type='button'
           className={cn(styles['link-btn'], styles['clear-btn'])}
-          onClick={clearCart}
+          onClick={clearWishlist}
         >
           Remove All Items
         </button>
       </div>
-      <CartTotal />
     </section>
   )
 }
 
-export default CartContent
+export default WishlistContent

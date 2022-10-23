@@ -6,7 +6,7 @@ const GridView = ({ products }) => {
   return (
     <section className={styles['products-container']}>
       {products.map((product) => (
-        <Product key={product.id} {...product} />
+        <Product key={product.id} product={product} />
       ))}
     </section>
   )

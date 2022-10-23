@@ -6,18 +6,18 @@ import {
   CHANGE_CART_ITEM_AMOUNT,
   CLEAR_CART,
   COUNT_CART_TOTALS,
-  REMOVE_ITEM,
+  REMOVE_ITEM_FROM_CART,
 } from '../actions'
 import reducer from '../reducers/cart_reducer'
 
-const getLocalStorage = () => {
+const getCart = () => {
   return localStorage.getItem('cart')
     ? JSON.parse(localStorage.getItem('cart'))
     : []
 }
 
 const initialState = {
-  cart: getLocalStorage(),
+  cart: getCart(),
   totalItems: 0,
   totalAmount: 0,
   shippingFee: 999,
@@ -34,11 +34,11 @@ export const CartProvider = ({ children }) => {
     })
   }
 
-  const removeItem = (id) => {
-    dispatch({ type: REMOVE_ITEM, payload: id })
+  const removeItemFromCart = (id) => {
+    dispatch({ type: REMOVE_ITEM_FROM_CART, payload: id })
   }
 
-  const changeAmount = (id, value) => {
+  const changeCartItemAmount = (id, value) => {
     dispatch({ type: CHANGE_CART_ITEM_AMOUNT, payload: { id, value } })
   }
 
@@ -53,7 +53,13 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, removeItem, changeAmount, clearCart }}
+      value={{
+        ...state,
+        addToCart,
+        removeItemFromCart,
+        changeCartItemAmount,
+        clearCart,
+      }}
     >
       {children}
     </CartContext.Provider>

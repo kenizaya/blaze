@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../styles/CartColumns.module.css'
+import styles from '../styles/Columns.module.css'
 
-const CartColumns = () => {
+const Columns = () => {
   return (
     <div className={styles.div}>
       <div className={styles.content}>
@@ -16,4 +16,4 @@ const CartColumns = () => {
   )
 }
 
-export default CartColumns
+export default Columns

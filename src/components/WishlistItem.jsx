@@ -1,19 +1,20 @@
 import React from 'react'
 import { FaTrash } from 'react-icons/fa'
 import cn from 'classnames'
-import { useCartContext } from '../context/cart_context'
-import styles from '../styles/CartItem.module.css'
+import { useWishlistContext } from '../context/wishlist_context'
+import styles from '../styles/WishlistItem.module.css'
 import { formatPrice } from '../utils/helpers'
 import AmountButtons from './AmountButtons'
 
-const CartItem = ({ id, name, image, color, amount, price }) => {
-  const { removeItemFromCart, changeCartItemAmount } = useCartContext()
+const WishlistItem = ({ id, name, image, color, amount, price }) => {
+  const { removeItemFromWishlist, changeWishlistItemAmount } =
+    useWishlistContext()
 
   const increase = () => {
-    changeCartItemAmount(id, 'inc')
+    changeWishlistItemAmount(id, 'inc')
   }
   const decrease = () => {
-    changeCartItemAmount(id, 'dec')
+    changeWishlistItemAmount(id, 'dec')
   }
 
   return (
@@ -37,7 +38,7 @@ const CartItem = ({ id, name, image, color, amount, price }) => {
       <button
         type='button'
         className={styles['remove-btn']}
-        onClick={() => removeItemFromCart(id)}
+        onClick={() => removeItemFromWishlist(id)}
       >
         <FaTrash />
       </button>
@@ -45,4 +46,4 @@ const CartItem = ({ id, name, image, color, amount, price }) => {
   )
 }
 
-export default CartItem
+export default WishlistItem
