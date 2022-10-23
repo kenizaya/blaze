@@ -36,10 +36,6 @@ const SingleProduct = () => {
             <Ratings ratings={ratings} reviews={reviews} />
             <h5 className={styles.price}>{formatPrice(price)}</h5>
             <p className={styles.description}>{description}</p>
-            <p className={styles.stock}>
-              <span>Available : </span>
-              {stock > 0 ? `${stock}` : 'Out of stock'}
-            </p>
             <hr />
             <AddToCart product={product} />
           </section>

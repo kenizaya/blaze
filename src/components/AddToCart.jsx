@@ -29,6 +29,10 @@ const AddToCart = ({ product }) => {
               <FaCheck color={color === 'white' ? 'black' : '#f7f7f7'} />
             </button>
           </div>
+          <p className={styles.stock}>
+            <span>Available : </span>
+            {stock > 0 ? `${stock}` : 'Out of stock'}
+          </p>
           <div className={styles['amount-btn-wrapper']}>
             <AmountButtons
               amount={amount}

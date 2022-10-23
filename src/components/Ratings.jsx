@@ -5,7 +5,7 @@ import styles from '../styles/Ratings.module.css'
 const Ratings = ({ ratings, reviews }) => {
   const stars = Array.from({ length: 5 }, (_, index) => {
     return (
-      <span key={index}>
+      <span key={index} className={styles.star}>
         {ratings >= index + 1 ? (
           <BsStarFill />
         ) : ratings >= index - 0.5 ? (

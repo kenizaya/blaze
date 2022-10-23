@@ -5,10 +5,11 @@ import styles from '../styles/Product.module.css'
 import { BsHeart } from 'react-icons/bs'
 import { useWishlistContext } from '../context/wishlist_context'
 import { AddToCartButton } from '../components'
+import Ratings from './Ratings'
 
 const Product = ({ product }) => {
   const { addToWishlist } = useWishlistContext()
-  const { id, price, image, name, color } = product
+  const { id, price, image, name, color, ratings, reviews } = product
 
   return (
     <div className={styles['product-card']}>
@@ -16,6 +17,8 @@ const Product = ({ product }) => {
         <img src={image} alt={name} className={styles.img} />
         <h4 className={styles.name}>{name}</h4>
       </Link>
+
+      <Ratings ratings={ratings} reviews={reviews} />
 
       <div className={styles['price-wrapper']}>
         <span className={styles.price}>{formatPrice(price)}</span>

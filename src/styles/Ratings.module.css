@@ -4,5 +4,15 @@
 }
 
 .ratings-wrapper span {
-  margin-right: 4px;
+  margin-right: 2px;
+}
+
+.star {
+  color: #f0b429;
+  font-size: 1rem;
+}
+
+.reviews {
+  margin-bottom: 0;
+  font-size: 1rem;
 }

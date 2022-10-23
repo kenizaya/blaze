@@ -38,17 +38,6 @@
   opacity: 0.85;
 }
 
-.stock {
-  text-transform: capitalize;
-  width: 300px;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-}
-
-.stock span {
-  font-weight: 700;
-}
-
 .btn {
   padding: 8px 16px;
   background-color: #102a43;
