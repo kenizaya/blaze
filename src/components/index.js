@@ -10,11 +10,13 @@ import Footer from './Footer'
 import GridView from './GridView'
 import ListView from './ListView'
 import CartContent from './CartContent'
+import AddToCartButton from './AddToCartButton'
 import Columns from './Columns'
 import CartItem from './CartItem'
 import CartTotal from './CartTotal'
 import WishlistContent from './WishlistContent'
 import WishlistItem from './WishlistItem'
+import AmountButtons from './AmountButtons'
 
 export {
   Navbar,
@@ -34,4 +36,6 @@ export {
   CartTotal,
   WishlistContent,
   WishlistItem,
+  AddToCartButton,
+  AmountButtons,
 }

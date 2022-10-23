@@ -5,6 +5,7 @@
 
 .name {
   color: #222222;
+  margin-bottom: 5px;
 }
 
 .name:hover {
@@ -17,20 +18,28 @@
   transition: all 0.3s linear;
 }
 
-.price-wrapper {
+.price-wrapper,
+.wishlist,
+.wishlist-cart-wrapper,
+.btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
 .price {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .wishlist {
   cursor: pointer;
 }
 
+.wishlist svg {
+  color: #d64545;
+}
+
 .wishlist svg:hover {
-  fill: #127fbf;
+  color: #ba2525;
 }

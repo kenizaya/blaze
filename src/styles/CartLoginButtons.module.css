@@ -5,16 +5,15 @@
 }
 
 .cart-icon,
-.wishlist-icon {
+.cart-icon a,
+.wishlist-icon,
+.wishlist-icon a {
   font-size: 1.5rem;
-  display: inline-block;
+  display: flex;
   align-items: center;
+  justify-content: center;
   color: #102a43;
   position: relative;
-}
-
-.wishlist-icon {
-  align-self: flex-end;
 }
 
 .cart-value {

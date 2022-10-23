@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { useCartContext } from '../context/cart_context'
 import styles from '../styles/CartItem.module.css'
 import { formatPrice } from '../utils/helpers'
-import AmountButtons from './AmountButtons'
+import { AmountButtons } from '../components'
 
 const CartItem = ({ id, name, image, color, amount, price }) => {
   const { removeItemFromCart, changeCartItemAmount } = useCartContext()

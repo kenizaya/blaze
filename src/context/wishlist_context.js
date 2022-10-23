@@ -23,8 +23,7 @@ const WishlistContext = createContext()
 export const WishlistProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const addToWishlist = (id, color, amount, product) => {
-    console.log(id, color, amount, product)
+  const addToWishlist = (id, color, product) => {
     dispatch({
       type: ADD_TO_WISHLIST,
       payload: { id, color, product },
