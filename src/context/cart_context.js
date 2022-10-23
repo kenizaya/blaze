@@ -5,6 +5,7 @@ import {
   ADD_TO_CART,
   CHANGE_CART_ITEM_AMOUNT,
   CLEAR_CART,
+  COUNT_CART_TOTALS,
   REMOVE_ITEM,
 } from '../actions'
 import reducer from '../reducers/cart_reducer'
@@ -46,6 +47,7 @@ export const CartProvider = ({ children }) => {
   }
 
   useEffect(() => {
+    dispatch({ type: COUNT_CART_TOTALS })
     localStorage.setItem('cart', JSON.stringify(state.cart))
   }, [state.cart])
 

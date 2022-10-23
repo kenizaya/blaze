@@ -1,29 +1,31 @@
 import React from 'react'
 import { BsBag, BsBagFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../context/cart_context'
 import { useProductsContext } from '../context/products_context'
 import styles from '../styles/CartLoginButtons.module.css'
 
 const CartLoginButtons = () => {
   const { closeSidebar } = useProductsContext()
+  const { totalItems } = useCartContext()
 
   return (
     <div className={styles['cart-login-wraper']}>
       <Link to='/' className={styles.link}>
         Login
       </Link>
-      <div className={styles['cart-icon']}>
-        <Link to='cart' style={{ color: 'black' }} onClick={closeSidebar}>
-          {0 ? (
-            <>
+      <span className={styles['cart-icon']}>
+        <Link to='/cart' style={{ color: 'black' }} onClick={closeSidebar}>
+          {totalItems ? (
+            <span>
               <BsBagFill />
-              <div className={styles['cart-value']}></div>
-            </>
+              <span className={styles['cart-value']}>{totalItems}</span>
+            </span>
           ) : (
             <BsBag />
           )}
         </Link>
-      </div>
+      </span>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import {
   ADD_TO_CART,
   CHANGE_CART_ITEM_AMOUNT,
   CLEAR_CART,
+  COUNT_CART_TOTALS,
   REMOVE_ITEM,
 } from '../actions'
 
@@ -62,6 +63,21 @@ const cart_reducer = (state, action) => {
       })
 
       return { ...state, cart: tempCart }
+    }
+    case COUNT_CART_TOTALS: {
+      const { totalItems, totalAmount } = state.cart.reduce(
+        (total, cartItem) => {
+          const { amount, price } = cartItem
+          total.totalItems += amount
+          total.totalAmount += price * amount
+          return total
+        },
+        {
+          totalAmount: 0,
+          totalItems: 0,
+        }
+      )
+      return { ...state, totalAmount, totalItems }
     }
     default:
       return state
