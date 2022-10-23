@@ -1,19 +1,25 @@
 import React from 'react'
-import { BsBag, BsBagFill, BsHeart } from 'react-icons/bs'
+import { BsBag, BsBagFill, BsHeart, BsHeartFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/cart_context'
 import { useProductsContext } from '../context/products_context'
+import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/CartLoginButtons.module.css'
 
 const CartLoginButtons = () => {
   const { closeSidebar } = useProductsContext()
   const { totalItems } = useCartContext()
+  const { wishlist } = useWishlistContext()
 
   return (
     <div className={styles['cart-login-wraper']}>
       <span className={styles['wishlist-icon']}>
         <Link to='/wishlist' style={{ color: 'black' }} onClick={closeSidebar}>
-          <BsHeart size={'20px'} />
+          {wishlist.length > 0 ? (
+            <BsHeartFill size={'20px'} />
+          ) : (
+            <BsHeart size={'20px'} />
+          )}
         </Link>
       </span>
       <span className={styles['cart-icon']}>

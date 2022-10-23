@@ -9,7 +9,6 @@ const WishlistContent = () => {
   const { wishlist, clearWishlist } = useWishlistContext()
   return (
     <section className={styles.section}>
-      {/* <Columns /> */}
       <h3 className={styles.title}>Wishlist</h3>
       <hr style={{ marginBottom: '50px' }} />
       {wishlist.map((item) => (
@@ -28,13 +27,16 @@ const WishlistContent = () => {
           >
             Remove All Items
           </button>
-          <button
-            type='button'
-            className={cn(styles['link-btn'], styles['cart-btn'])}
-            onClick={clearWishlist}
-          >
-            Go To Cart
-          </button>
+
+          <Link to='/cart'>
+            <button
+              type='button'
+              className={cn(styles['link-btn'], styles['cart-btn'])}
+              onClick={clearWishlist}
+            >
+              Go To Cart
+            </button>
+          </Link>
         </div>
       </div>
     </section>

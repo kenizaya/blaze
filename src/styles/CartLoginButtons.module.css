@@ -16,6 +16,10 @@
   position: relative;
 }
 
+.wishlist-icon svg {
+  color: #d64545;
+}
+
 .cart-value {
   background-color: #102a43;
   position: absolute;
