@@ -4,6 +4,13 @@
   align-items: center;
 }
 
+.price-cart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 208px;
+}
+
 .products-container img {
   width: 300px;
   height: 320px;
