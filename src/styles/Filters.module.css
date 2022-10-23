@@ -88,6 +88,10 @@
   border-radius: 4px;
 }
 
+.clear-btn:hover {
+  background-color: #911111;
+}
+
 @media (min-width: 690px) {
   .content {
     position: sticky;

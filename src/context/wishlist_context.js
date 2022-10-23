@@ -23,10 +23,21 @@ const WishlistContext = createContext()
 export const WishlistProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const addToWishlist = (id, color, product) => {
+  const toggleWishlistItem = (id, product) => {
+    const tempProduct = state.wishlist.find((item) => item.id === id)
+
+    if (tempProduct) dispatch({ type: REMOVE_ITEM_FROM_WISHLIST, payload: id })
+    else
+      dispatch({
+        type: ADD_TO_WISHLIST,
+        payload: product,
+      })
+  }
+
+  const addToWishlist = (product) => {
     dispatch({
       type: ADD_TO_WISHLIST,
-      payload: { id, color, product },
+      payload: product,
     })
   }
 
@@ -54,6 +65,7 @@ export const WishlistProvider = ({ children }) => {
         removeItemFromWishlist,
         changeWishlistItemAmount,
         clearWishlist,
+        toggleWishlistItem,
       }}
     >
       {children}

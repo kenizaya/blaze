@@ -30,15 +30,15 @@
 
 .hero-btn {
   padding: 15px 20px;
-  background-color: #102a43;
-  color: white;
+  background-color: #f7c948;
+  color: #102a43;
   border-radius: 4px;
   text-decoration: none;
-  border: 1px solid #102a43;
+  /* border: 1px solid #10  2a43; */
 }
 
-.hero-btn:active {
-  border: none;
+.hero-btn:hover {
+  background-color: #f0b429;
 }
 
 @media (max-width: 690px) {

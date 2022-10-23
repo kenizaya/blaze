@@ -1,5 +1,4 @@
-.price,
-.subtotal {
+.price {
   display: none;
 }
 
@@ -72,14 +71,13 @@
 
 @media (min-width: 690px) {
   .article {
-    grid-template-columns: repeat(4, 1fr) auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .price-small {
     display: none;
   }
-  .price,
-  .subtotal {
+  .price {
     display: block;
     font-size: 1rem;
   }

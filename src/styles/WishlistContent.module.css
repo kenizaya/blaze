@@ -3,6 +3,12 @@
   padding: 64px 0;
 }
 
+.title {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
 .link-container {
   display: flex;
   justify-content: space-between;
@@ -25,4 +31,24 @@
 
 .clear-btn {
   background-color: #a61b1b;
+}
+
+.cart-btn {
+  background-color: #f0b429;
+  color: #102a43;
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+@media (max-width: 690px) {
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 40px;
+  }
 }

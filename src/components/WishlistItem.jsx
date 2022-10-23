@@ -5,8 +5,10 @@ import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/WishlistItem.module.css'
 import { formatPrice } from '../utils/helpers'
 import AmountButtons from './AmountButtons'
+import AddToCartButton from './AddToCartButton'
 
-const WishlistItem = ({ id, name, image, color, amount, price }) => {
+const WishlistItem = ({ product }) => {
+  const { id, name, image, color, price } = product
   const { removeItemFromWishlist, changeWishlistItemAmount } =
     useWishlistContext()
 
@@ -30,11 +32,6 @@ const WishlistItem = ({ id, name, image, color, amount, price }) => {
         </div>
       </div>
       <h5 className={cn(styles.price, styles.h5)}>{formatPrice(price)}</h5>
-      <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-
-      <h5 className={cn(styles.subtotal, styles.h5)}>
-        {formatPrice(price * amount)}
-      </h5>
       <button
         type='button'
         className={styles['remove-btn']}
@@ -42,6 +39,7 @@ const WishlistItem = ({ id, name, image, color, amount, price }) => {
       >
         <FaTrash />
       </button>
+      <AddToCartButton product={product} />
     </article>
   )
 }

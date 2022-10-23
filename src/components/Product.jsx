@@ -8,8 +8,8 @@ import { AddToCartButton } from '../components'
 import Ratings from './Ratings'
 
 const Product = ({ product }) => {
-  const { addToWishlist } = useWishlistContext()
-  const { id, price, image, name, color, ratings, reviews } = product
+  const { toggleWishlistItem } = useWishlistContext()
+  const { id, price, image, name, ratings, reviews } = product
 
   return (
     <div className={styles['product-card']}>
@@ -24,7 +24,7 @@ const Product = ({ product }) => {
         <span className={styles.price}>{formatPrice(price)}</span>
         <div className={styles['wishlist-cart-wrapper']}>
           <span className={styles.wishlist}>
-            <BsHeart onClick={() => addToWishlist(id, color, product)} />
+            {<BsHeart onClick={() => toggleWishlistItem(id, product)} />}
           </span>
           <span className={styles.btn}>
             <AddToCartButton product={product} />

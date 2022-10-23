@@ -10,7 +10,7 @@
 }
 
 .link-btn {
-  background: #102a43;
+  background: #334e68;
   border-color: transparent;
   border-radius: 4px;
   color: #f7f7f7;
@@ -19,10 +19,18 @@
   cursor: pointer;
 }
 
+.link-btn:hover {
+  background: #102a43;
+}
+
 .link-btn a {
   color: #f7f7f7;
 }
 
 .clear-btn {
   background-color: #a61b1b;
+}
+
+.clear-btn:hover {
+  background-color: #911111;
 }
