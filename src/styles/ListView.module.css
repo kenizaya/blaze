@@ -41,9 +41,15 @@
 
 .btn {
   padding: 4px 32px;
-  background-color: #102a43;
+  background-color: #243b53;
   border-radius: 4px;
   margin-bottom: 20px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #102a43;
 }
 
 .btn a {
