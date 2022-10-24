@@ -31,22 +31,14 @@
   border: none;
   letter-spacing: 1px;
   cursor: pointer;
-}
-
-.btn:hover,
-.browse-btn:hover {
-  background-color: #f0b429;
-}
-
-.btn a,
-.browse-btn a {
   color: #102a43;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
 
-.browse-btn {
-  font-size: 1.2rem;
+.btn:hover,
+.browse-btn:hover {
+  background-color: #f0b429;
 }
 
 .stock {

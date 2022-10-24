@@ -1,19 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from '../styles/Error.module.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "../styles/Error.module.css";
 
 const Error = () => {
   return (
-    <main className={styles['error-container']}>
+    <main className={styles["error-container"]}>
       <section>
         <h1>404</h1>
         <h3>Sorry, the page doesn't exist</h3>
-        <button type='button' className={styles.btn}>
-          <Link to='/'>Back Home</Link>
-        </button>
+
+        <Link to="/">
+          <button type="button" className={styles.btn}>
+            Back Home
+          </button>
+        </Link>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;

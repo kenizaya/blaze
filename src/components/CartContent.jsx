@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import cn from 'classnames'
-import { useCartContext } from '../context/cart_context'
-import styles from '../styles/CartContent.module.css'
-import { Columns, CartItem, CartTotal } from '../components'
+import React from "react";
+import { Link } from "react-router-dom";
+import cn from "classnames";
+import { useCartContext } from "../context/cart_context";
+import styles from "../styles/CartContent.module.css";
+import { Columns, CartItem, CartTotal } from "../components";
 
 const CartContent = () => {
-  const { cart, clearCart } = useCartContext()
+  const { cart, clearCart } = useCartContext();
   return (
     <section className={styles.section}>
       <Columns />
@@ -14,13 +14,16 @@ const CartContent = () => {
         <CartItem key={item.id} {...item} />
       ))}
       <hr />
-      <div className={styles['link-container']}>
-        <button type='button' className={styles['link-btn']}>
-          <Link to='/products'>Continue Shopping</Link>
-        </button>
+      <div className={styles["link-container"]}>
+        <Link to="/products">
+          <button type="button" className={styles["link-btn"]}>
+            Continue Shopping
+          </button>
+        </Link>
+
         <button
-          type='button'
-          className={cn(styles['link-btn'], styles['clear-btn'])}
+          type="button"
+          className={cn(styles["link-btn"], styles["clear-btn"])}
           onClick={clearCart}
         >
           Remove All Items
@@ -28,7 +31,7 @@ const CartContent = () => {
       </div>
       <CartTotal />
     </section>
-  )
-}
+  );
+};
 
-export default CartContent
+export default CartContent;

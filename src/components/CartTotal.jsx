@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useCartContext } from '../context/cart_context'
-import { formatPrice } from '../utils/helpers'
-import styles from '../styles/CartTotal.module.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import { useCartContext } from "../context/cart_context";
+import { formatPrice } from "../utils/helpers";
+import styles from "../styles/CartTotal.module.css";
 
 const CartTotal = () => {
-  const { totalAmount, shippingFee } = useCartContext()
+  const { totalAmount, shippingFee } = useCartContext();
 
   return (
     <section className={styles.section}>
@@ -23,12 +23,15 @@ const CartTotal = () => {
             Order Total: <span>{formatPrice(totalAmount + shippingFee)}</span>
           </h4>
         </article>
-        <button type='button' className={styles.btn}>
-          <Link to='/checkout'>Checkout</Link>
-        </button>
+
+        <Link to="/checkout">
+          <button type="button" className={styles.btn}>
+            Checkout
+          </button>
+        </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CartTotal
+export default CartTotal;
