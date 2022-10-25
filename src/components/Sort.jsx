@@ -44,7 +44,8 @@ const Sort = () => {
           </button>
         </div>
       </div>
-      {showFilters && <Filters />}
+      <div className={styles.filters}>{showFilters && <Filters />}</div>
+
       <p className={styles.p}>{products.length} Products Found</p>
       <hr />
       <form>

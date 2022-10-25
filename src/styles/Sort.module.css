@@ -64,7 +64,8 @@
 }
 
 @media (min-width: 690px) {
-  .filters-btn {
+  .filters-btn,
+  .filters {
     display: none;
   }
 }

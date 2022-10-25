@@ -10,7 +10,7 @@ import Ratings from './Ratings'
 const Product = ({ product }) => {
   const { hasWishlisted, toggleWishlistItem } = useWishlistContext()
   const { id, price, image, name, ratings, reviews } = product
-  console.log(id)
+
   return (
     <div className={styles['product-card']}>
       <Link to={`/product/${id}`}>
