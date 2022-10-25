@@ -6,10 +6,13 @@ import logo from '../assets/logo.png'
 import { links } from '../utils/constants'
 import { CartLoginButtons } from '../components'
 import styles from '../styles/Navbar.module.css'
+import cn from 'classnames'
 import { useProductsContext } from '../context/products_context'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Navbar = () => {
-  const { isSidebarOpen, openSidebar } = useProductsContext()
+  const { user } = useAuth0()
+  const { openSidebar } = useProductsContext()
 
   return (
     <nav className={styles.navbar}>
@@ -28,17 +31,30 @@ const Navbar = () => {
       <ul className={styles['nav-links']}>
         {links.map((link) => {
           return (
-            <NavLink
-              key={link.id}
-              to={link.url}
-              className={({ isActive }) =>
-                isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
-              }
-            >
-              {link.text}
-            </NavLink>
+            <li key={link.id}>
+              <NavLink
+                to={link.url}
+                className={({ isActive }) =>
+                  isActive ? cn(styles.active, styles.link) : styles.link
+                }
+              >
+                {link.text}
+              </NavLink>
+            </li>
           )
         })}
+        {user && (
+          <li>
+            <NavLink
+              to='/checkout'
+              className={({ isActive }) =>
+                isActive ? cn(styles.active, styles.link) : styles.link
+              }
+            >
+              Checkout
+            </NavLink>
+          </li>
+        )}
       </ul>
       <div className={styles['cart-login-wrapper']}>
         <CartLoginButtons />

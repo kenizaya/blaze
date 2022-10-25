@@ -37,7 +37,8 @@
 .btn-wrapper {
   display: flex;
   gap: 12px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex: 0.5;
 }
 
 @media (max-width: 690px) {
@@ -46,5 +47,9 @@
     flex-direction: column;
     gap: 10px;
     margin: 10px 40px;
+  }
+
+  .continue-btn {
+    width: 100%;
   }
 }

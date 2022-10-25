@@ -28,7 +28,8 @@ const WishlistItem = ({ product }) => {
         className={styles['remove-btn']}
         onClick={() => removeItemFromWishlist(id)}
       >
-        <FaTrash />
+        Remove Item
+        {/* <FaTrash /> */}
       </button>
       <AddToCartButton product={product} />
     </article>

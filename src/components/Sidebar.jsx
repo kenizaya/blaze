@@ -7,8 +7,10 @@ import styles from '../styles/Sidebar.module.css'
 import { Link } from 'react-router-dom'
 import { CartLoginButtons } from '../components'
 import { useProductsContext } from '../context/products_context'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Sidebar = () => {
+  const { user } = useAuth0()
   const { isSidebarOpen, closeSidebar } = useProductsContext()
 
   return (
@@ -39,11 +41,13 @@ const Sidebar = () => {
             </li>
           )
         })}
-        <li>
-          <Link to='/checkout' onClick={closeSidebar}>
-            Checkout
-          </Link>
-        </li>
+        {user && (
+          <li>
+            <Link to='/checkout' onClick={closeSidebar}>
+              Checkout
+            </Link>
+          </li>
+        )}
       </ul>
       <div className={styles['cart-login-wrapper']}>
         <CartLoginButtons />

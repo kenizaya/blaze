@@ -59,13 +59,9 @@
   border: transparent;
   background: #a61b1b;
   color: #f7f7f7;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 4px;
   font-size: 0.75rem;
+  padding: 4px 8px;
   cursor: pointer;
 }
 
@@ -98,5 +94,10 @@
   .title {
     grid-template-columns: 100px 200px;
     grid-template-rows: 110px;
+  }
+
+  .remove-btn {
+    font-size: 0.85rem;
+    margin-left: 84px;
   }
 }

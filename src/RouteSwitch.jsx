@@ -9,6 +9,7 @@ import {
   Error,
   Cart,
   About,
+  PrivateRoute,
 } from './pages'
 import Wishlist from './pages/Wishlist'
 
@@ -23,7 +24,14 @@ const RouteSwitch = () => {
           <Route path='about' element={<About />} />
           <Route path='wishlist' element={<Wishlist />} />
           <Route path='cart' element={<Cart />} />
-          <Route path='checkout' element={<Checkout />} />
+          <Route
+            path='checkout'
+            element={
+              <PrivateRoute>
+                <Checkout />
+              </PrivateRoute>
+            }
+          />
           <Route path='contact' element={<Contact />} />
           <Route path='*' element={<Error />} />
         </Route>

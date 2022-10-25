@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/cart_context'
 import { useProductsContext } from '../context/products_context'
 import { useWishlistContext } from '../context/wishlist_context'
+import { useAuth0 } from '@auth0/auth0-react'
 import styles from '../styles/CartLoginButtons.module.css'
 
 const CartLoginButtons = () => {
   const { closeSidebar } = useProductsContext()
   const { totalItems } = useCartContext()
   const { wishlist } = useWishlistContext()
+  const { loginWithRedirect, user, logout } = useAuth0()
 
   return (
     <div className={styles['cart-login-wraper']}>
@@ -34,9 +36,21 @@ const CartLoginButtons = () => {
           )}
         </Link>
       </span>
-      <Link to='/' className={styles.link}>
-        Login
-      </Link>
+
+      {user ? (
+        <button
+          className={styles['auth-btn']}
+          onClick={() =>
+            logout({ returnTo: `${window.location.origin}/blaze` })
+          }
+        >
+          Logout
+        </button>
+      ) : (
+        <button className={styles['auth-btn']} onClick={loginWithRedirect}>
+          Login
+        </button>
+      )}
     </div>
   )
 }
