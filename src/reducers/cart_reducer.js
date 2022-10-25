@@ -57,9 +57,8 @@ const cart_reducer = (state, action) => {
             if (newAmount < 1) newAmount = 1
             return { ...item, amount: newAmount }
           }
-        } else {
-          return item
         }
+        return item
       })
 
       return { ...state, cart: tempCart }

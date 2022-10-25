@@ -1,4 +1,3 @@
-import styles from '../styles/Products.module.css'
 import { useFilteredContext } from '../context/filter_context'
 import { GridView, ListView } from '../components'
 

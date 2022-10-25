@@ -15,7 +15,7 @@ import Wishlist from './pages/Wishlist'
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter basename='/blaze'>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />

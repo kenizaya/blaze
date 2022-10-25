@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaTrash } from 'react-icons/fa'
 import cn from 'classnames'
 import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/WishlistItem.module.css'

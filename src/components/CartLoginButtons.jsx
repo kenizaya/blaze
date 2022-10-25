@@ -40,9 +40,7 @@ const CartLoginButtons = () => {
       {user ? (
         <button
           className={styles['auth-btn']}
-          onClick={() =>
-            logout({ returnTo: `${window.location.origin}/blaze` })
-          }
+          onClick={() => logout({ returnTo: window.location.origin })}
         >
           Logout
         </button>
