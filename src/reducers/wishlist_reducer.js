@@ -27,9 +27,7 @@ const wishlist_reducer = (state, action) => {
       if (value === 'add' && !tempItemIds.includes(id)) tempItemIds.push(id)
       else if (value === 'remove') {
         tempItemIds = tempItemIds.filter((item) => item !== id)
-        console.log('removed', id, tempItemIds)
       }
-      console.log(tempItemIds)
 
       return { ...state, wishlistedItemIds: tempItemIds }
     }
