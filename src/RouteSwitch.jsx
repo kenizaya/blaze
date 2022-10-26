@@ -11,32 +11,35 @@ import {
   About,
   PrivateRoute,
 } from './pages'
+import AuthWrapper from './pages/AuthWrapper'
 import Wishlist from './pages/Wishlist'
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />}>
-          <Route index element={<Home />} />
-          <Route path='products' element={<Products />} />
-          <Route path='product/:id' element={<SingleProduct />} />
-          <Route path='about' element={<About />} />
-          <Route path='wishlist' element={<Wishlist />} />
-          <Route path='cart' element={<Cart />} />
-          <Route
-            path='checkout'
-            element={
-              <PrivateRoute>
-                <Checkout />
-              </PrivateRoute>
-            }
-          />
-          <Route path='contact' element={<Contact />} />
-          <Route path='*' element={<Error />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <AuthWrapper>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App />}>
+            <Route index element={<Home />} />
+            <Route path='products' element={<Products />} />
+            <Route path='product/:id' element={<SingleProduct />} />
+            <Route path='about' element={<About />} />
+            <Route path='wishlist' element={<Wishlist />} />
+            <Route path='cart' element={<Cart />} />
+            <Route
+              path='checkout'
+              element={
+                <PrivateRoute>
+                  <Checkout />
+                </PrivateRoute>
+              }
+            />
+            <Route path='contact' element={<Contact />} />
+            <Route path='*' element={<Error />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AuthWrapper>
   )
 }
 

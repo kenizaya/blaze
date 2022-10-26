@@ -7,6 +7,7 @@ import Home from './Home'
 import Products from './Products'
 import SingleProduct from './SingleProduct'
 import PrivateRoute from './PrivateRoute'
+import AuthWrapper from './AuthWrapper'
 
 export {
   About,
