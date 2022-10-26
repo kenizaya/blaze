@@ -12,6 +12,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { formatPrice } from '../utils/helpers'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import axios from 'axios'
 
 const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
@@ -49,20 +50,67 @@ const CheckoutForm = () => {
   }
 
   const createPaymentIntent = async () => {
-    console.log('stripe checkout')
+    try {
+      const { data } = await axios.post(
+        '/.netlify/functions/create-payment-intent',
+        JSON.stringify({ cart, totalAmount, shippingFee })
+      )
+      setClientSecret(data.clientSecret)
+    } catch (error) {}
   }
 
   useEffect(() => {
     createPaymentIntent()
+    // eslint-disable-next-line
   }, [])
 
-  const handleChange = async (event) => {}
+  const handleChange = async (event) => {
+    setDisabled(event.empty)
+    setError(event.error ? error.message : '')
+  }
 
   const handleSubmit = async (ev) => {
     ev.preventDefault()
+    setProcessng(true)
+
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
+    })
+
+    if (payload.error) {
+      setError(`Payment failed ${payload.error.message}`)
+      setProcessng(false)
+    } else {
+      setError(null)
+      setProcessng(false)
+      setSucceded(true)
+      setTimeout(() => {
+        clearCart()
+        navigate('/')
+      }, 6000)
+    }
   }
   return (
     <div>
+      {succeeded ? (
+        <article>
+          <h3>Thank you, {user && user.name}</h3>
+          <h4>Your payment was successful!</h4>
+          <h4>Redirecting to home page shortly</h4>
+        </article>
+      ) : (
+        <article>
+          <h3>Hello, {user && user.name}</h3>
+          <h4>Your total is {formatPrice(totalAmount + shippingFee)}</h4>
+          <p className='card-number'>Test Card Number : 4242 4242 4242 4242</p>
+          <p>
+            This card number works with any CVC, postal code, and future expiry
+            date.
+          </p>
+        </article>
+      )}
       <form id='payment-form' onSubmit={handleSubmit}>
         <CardElement
           id='card-element'
@@ -183,6 +231,30 @@ const Wrapper = styled.section`
     opacity: 0.5;
     cursor: default;
   }
+
+  article h3 {
+    font-size: 2.4rem;
+  }
+
+  article h3,
+  article h4 {
+    margin-bottom: 8px;
+  }
+
+  article h4 {
+    font-size: 1.4rem;
+  }
+
+  .card-number {
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  aritcle h4,
+  article p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
   /* spinner/processing state, errors */
   .spinner,
   .spinner:before,
@@ -241,9 +313,14 @@ const Wrapper = styled.section`
       transform: rotate(360deg);
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 690px) {
     form {
       width: 80vw;
+      margin: 20px;
+    }
+
+    article {
+      margin: 20px;
     }
   }
 `
