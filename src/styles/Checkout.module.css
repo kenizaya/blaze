@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 5rem);
+}
+
+.empty {
+  text-align: center;
+}
+
+.empty h2 {
+  margin-bottom: 16px;
+  font-size: 3rem;
+}
+
+.btn {
+  margin-top: 16px;
+  background: #102a43;
+  border-color: transparent;
+  border-radius: 4px;
+  color: #f7f7f7;
+  padding: 8px 16px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+@media (max-width: 690px) {
+  .empty h2 {
+    font-size: 2rem;
+  }
+}

@@ -9,7 +9,7 @@ import styles from '../styles/CartLoginButtons.module.css'
 
 const CartLoginButtons = () => {
   const { closeSidebar } = useProductsContext()
-  const { totalItems } = useCartContext()
+  const { totalItems, clearCart } = useCartContext()
   const { wishlist } = useWishlistContext()
   const { loginWithRedirect, user, logout } = useAuth0()
 
@@ -40,7 +40,10 @@ const CartLoginButtons = () => {
       {user ? (
         <button
           className={styles['auth-btn']}
-          onClick={() => logout({ returnTo: window.location.origin })}
+          onClick={() => {
+            logout({ returnTo: window.location.origin })
+            clearCart()
+          }}
         >
           Logout
         </button>

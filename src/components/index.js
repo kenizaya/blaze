@@ -17,6 +17,7 @@ import CartTotal from './CartTotal'
 import WishlistContent from './WishlistContent'
 import WishlistItem from './WishlistItem'
 import AmountButtons from './AmountButtons'
+import StripeCheckout from './StripeCheckout'
 
 export {
   Navbar,
@@ -38,4 +39,5 @@ export {
   WishlistItem,
   AddToCartButton,
   AmountButtons,
+  StripeCheckout,
 }
