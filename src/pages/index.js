@@ -19,4 +19,5 @@ export {
   Products,
   SingleProduct,
   PrivateRoute,
+  AuthWrapper,
 }

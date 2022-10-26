@@ -11,7 +11,7 @@ import {
   About,
   PrivateRoute,
 } from './pages'
-import AuthWrapper from './pages/AuthWrapper'
+import { AuthWrapper } from './pages'
 import Wishlist from './pages/Wishlist'
 
 const RouteSwitch = () => {
