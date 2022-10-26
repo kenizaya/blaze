@@ -28,7 +28,6 @@ const WishlistItem = ({ product }) => {
         onClick={() => removeItemFromWishlist(id)}
       >
         Remove Item
-        {/* <FaTrash /> */}
       </button>
       <AddToCartButton product={product} />
     </article>
