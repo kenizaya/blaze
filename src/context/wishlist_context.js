@@ -60,6 +60,10 @@ export const WishlistProvider = ({ children }) => {
 
   const removeItemFromWishlist = (id) => {
     dispatch({ type: REMOVE_ITEM_FROM_WISHLIST, payload: id })
+    dispatch({
+      type: UPDATE_WISHLISTED_ITEM_IDS,
+      payload: { id, value: 'remove' },
+    })
   }
 
   const clearWishlist = () => {
