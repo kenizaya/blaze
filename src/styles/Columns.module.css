@@ -8,7 +8,7 @@
   }
   .content {
     display: grid;
-    grid-template-columns: 320px repeat(3, 1fr) auto;
+    grid-template-columns: 320px repeat(3, 1fr) auto auto;
     justify-items: center;
     column-gap: 16px;
   }

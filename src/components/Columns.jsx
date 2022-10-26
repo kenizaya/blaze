@@ -10,6 +10,7 @@ const Columns = () => {
         <h5>Quantity</h5>
         <h5>Subtotal</h5>
         <span></span>
+        <span></span>
       </div>
       <hr />
     </div>

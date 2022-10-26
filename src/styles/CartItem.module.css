@@ -5,12 +5,13 @@
 
 .article {
   display: grid;
-  grid-template-columns: 200px auto auto;
+  grid-template-columns: 180px auto auto;
   grid-template-rows: 75px;
-  gap: 48px 16px;
+  gap: 48px 1px;
   justify-items: center;
   margin-bottom: 48px;
   align-items: center;
+  margin-left: 20px;
 }
 
 .title {
