@@ -4,6 +4,7 @@ import { useWishlistContext } from '../context/wishlist_context'
 import styles from '../styles/WishlistItem.module.css'
 import { formatPrice } from '../utils/helpers'
 import AddToCartButton from './AddToCartButton'
+import { Link } from 'react-router-dom'
 
 const WishlistItem = ({ product }) => {
   const { id, name, image, color, price } = product
@@ -12,9 +13,14 @@ const WishlistItem = ({ product }) => {
   return (
     <article className={styles.article}>
       <div className={styles.title}>
-        <img src={image} alt={name} className={styles.img} />
+        <Link to={`/product/${id}`}>
+          <img src={image} alt={name} className={styles.img} />
+        </Link>
         <div>
-          <h5 className={cn(styles.name, styles.h5)}>{name}</h5>
+          <Link to={`/product/${id}`}>
+            <h5 className={cn(styles.name, styles.h5)}>{name}</h5>
+          </Link>
+
           <p className={styles.color}>
             Color: <span style={{ background: color }}></span>
           </p>
