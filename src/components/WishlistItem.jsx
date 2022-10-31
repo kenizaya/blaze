@@ -20,7 +20,6 @@ const WishlistItem = ({ product }) => {
           <Link to={`/product/${id}`}>
             <h5 className={cn(styles.name, styles.h5)}>{name}</h5>
           </Link>
-
           <p className={styles.color}>
             Color: <span style={{ background: color }}></span>
           </p>

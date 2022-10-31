@@ -19,7 +19,7 @@ export const PRODUCTS = [
     name: 'Blue Regular Fit Teddy Jacket',
     price: 4299,
     category: 'jackets',
-    stock: 0,
+    stock: 4,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nisi dolor soluta quos optio cum ipsa sint? Repellendus fuga quaerat assumenda ipsa neque omnis repudiandae ex explicabo quibusdam provident molestias nesciunt esse earum, quasi nam dolorum rerum similique eius autem aut rem. Molestiae accusantium mollitia aliquam.',
     color: '#000080',
@@ -117,7 +117,7 @@ export const PRODUCTS = [
     name: 'Blue Solid Twill Trousers',
     category: 'trousers',
     price: 3399,
-    stock: 0,
+    stock: 5,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
     color: '#000080',
@@ -131,7 +131,7 @@ export const PRODUCTS = [
     name: 'Gray Skinny Fit Cargo Joggers',
     category: 'trousers',
     price: 3799,
-    stock: 0,
+    stock: 2,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minus deleniti ad error, quibusdam nemo voluptates sunt, debitis numquam, et animi atque assumenda quam neque? Nesciunt possimus, ipsa labore, delectus nam aspernatur impedit minus voluptatem amet repudiandae magnam reiciendis consequuntur.',
     color: 'gray',
