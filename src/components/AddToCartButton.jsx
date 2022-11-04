@@ -5,7 +5,6 @@ import styles from '../styles/AddToCartButton.module.css'
 const AddToCartButton = ({ product }) => {
   const { id, color, stock } = product
   const { addToCart } = useCartContext()
-  console.log(stock)
 
   return stock > 0 ? (
     <button
